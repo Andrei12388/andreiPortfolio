@@ -9,3 +9,26 @@
      width: 100%;
      position: fixed;
 }
+
+.icon{
+    width: 30px;
+    height: 30px;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+.iconHolder{
+     position: absolute;
+     display: flex;
+     right: 30px;
+     top: 15px;
+     gap: 10px;
+     margin: 0 0 0 0;
+    
+     justify-content: space-between;
+}
+
+.icon:hover{
+     scale: 1.4;
+
+}
