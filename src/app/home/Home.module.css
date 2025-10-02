@@ -1,0 +1,228 @@
+.container{
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    flex-direction: row;
+    align-self: center;
+    justify-self: center;
+    gap: 1em;
+    width: 55em;
+    height: 25em;
+    position: relative;
+    filter: drop-shadow(0 0 8px var(--pinkcolor));
+    
+}
+
+.body{
+    margin-top: 1em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pageText{
+    
+    font-size: larger;
+}
+
+.pageTitle{
+    
+    font-size: 40px;
+    
+}
+
+.button{
+    margin-top: 340%;
+    color: black;
+    font-size: 30px;
+    display: flex;
+    align-items: center;     
+    align-content: center;
+    justify-content: center; 
+    text-align: center;      
+   
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    filter: brightness(50%);
+    background-color: rgb(255, 255, 255);
+    transition: all 0.2s ease-in-out;
+}
+
+.button:hover{
+    scale: 1.1;
+    filter: brightness(100%);
+}
+
+.bio{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 15px;
+   
+    font-size: var(--fontsizenormal);
+    margin-bottom: 50px;
+    width: 1000px;
+    height: 505px;
+}
+
+.bioText{
+    bottom: 50px;
+}
+
+.imageHolder{
+    margin-top: 10px;
+    
+    filter: drop-shadow(0 0 10px var(--pinkcolor));
+    width: 280px;
+    height: 300px;
+    border-radius: 100%;
+     border: 5px solid var(--pinkcolor);
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+
+.imageHolder:hover{
+    border: 5px solid white;
+    filter: drop-shadow(0 0 10px white);
+    cursor: pointer;
+}
+
+.span{
+    
+    transition: all 0.2s ease-in-out;
+    color: rgb(201, 245, 9);
+    filter: drop-shadow(0 0 5px rgb(0, 0, 0));
+     
+}
+
+.span:hover{
+    cursor: pointer;
+   color: var(--pinkcolor);
+   
+}
+
+.skillsContainer{
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: left;
+    align-items: left;
+    flex-wrap: wrap;
+    width: 700px;
+    padding: 1em;
+    margin-bottom: 100px;
+   /* border: 3px solid red; */
+}
+
+.skillsContainerCategory{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: left;
+    gap: 20px;
+}
+
+.skills{
+    display: flex;
+    color: var(--pinkcolor);
+    padding: 1em;
+    background-color: white;
+    border-radius: 3px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    transition: all 0.2s ease-in-out;
+    filter: drop-shadow(0 0 5px var(--pinkcolor));
+}
+
+.skills:hover{
+    cursor: pointer;
+    scale: 1.1;
+    background-color: var(--pinkcolor);
+    color: white;
+}
+
+.circleGlow1{
+    position: absolute;
+    top: 10%;
+    left: -5%;
+    width: 8rem;
+    height: 20rem;
+    background: var(--pinkcolor);
+    border-radius: 50%;
+    filter: blur(10rem);
+    z-index: 1;
+}
+
+.circleGlow2{
+    position: absolute;
+    top: 25%;
+    right: 3%;
+    width: 10rem;
+    height: 10rem;
+    background: var(--pinkcolor);
+    border-radius: 50%;
+    filter: blur(10rem);
+    z-index: 1;
+}
+
+.circleGlow3{
+    position: absolute;
+    top: 70%;
+    left: 3%;
+    width: 20rem;
+    height: 10rem;
+    background: var(--pinkcolor);
+    border-radius: 50%;
+    filter: blur(14rem);
+    z-index: 1;
+}
+
+.circleGlow4{
+    position: absolute;
+    bottom: 2%;
+    right: 3%;
+    width: 20rem;
+    height: 10rem;
+    background: var(--pinkcolor);
+    border-radius: 50%;
+    filter: blur(10rem);
+    z-index: 1;
+}
+
+.icon{
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+}
+
+.video{
+    border: 1px solid var(--pinkcolor);
+    border-radius: 10px;
+    filter: drop-shadow(0 0 10px var(--pinkcolor));
+    transition: all 0.3s ease-in-out;
+    max-width: 320;
+     max-height: 240;
+}
+
+.videoContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.video.active {
+  border: 5px solid #4caf50; /* green border */
+  box-shadow: 0 0 15px rgba(76, 175, 80, 0.7);
+}

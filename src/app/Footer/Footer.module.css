@@ -1,0 +1,11 @@
+.card {
+     background-color: rgb(0, 0, 0);
+     text-align: center;
+     padding: 1em;
+     bottom: 0px;
+     
+     text-align: center;
+     color: whitesmoke;
+     width: 100%;
+     position: fixed;
+}

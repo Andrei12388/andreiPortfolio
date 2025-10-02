@@ -1,0 +1,12 @@
+.button{
+    background-color: aqua;
+    border-radius: 5px;
+    padding: 3em;
+    scale: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+.button:hover{
+    background-color: rgb(3, 125, 125);
+    scale: 1.2;
+}

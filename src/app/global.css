@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'VT323';
+  src: url('./Quicksand-VariableFont_wght.ttf') format('truetype');
+
+  font-family: "Quicksand", sans-serif;
+  
+  font-optical-sizing: auto;
+  font-weight: 300 700;
+  font-style: normal;
+}
+
+:root {
+    --fontsizenormal: 18px;
+    --fontsizesmall: 16px;
+    --pinkcolor: rgb(16, 87, 253);
+    --foreground-rgb: rgb(255, 255, 255);
+    --foreground-bg: rgb(33, 30, 37);
+   /* font-family: 'Courier New', Courier, monospace; */
+    
+}
+
+* {
+  cursor: none !important;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 0;
+    background-color: var(--foreground-bg);
+    color: var(--foreground-rgb);
+    cursor: none; 
+}
+
+.childrenContainer{
+    margin-top: 50px;
+}
+
