@@ -3,16 +3,14 @@
 import HomeCard from "../components/HomeCard/HomeCard";
 import styles from './Home.module.css';
 
-const blankImage = "../images/blank.jpg";
+const blankImage = "/images/blank.jpg";
 
 //import SomaImage from "../images/Soma.png";
-const psychesImage = "/images/psychesletter.PNG";  // ✅ matches file
-
+const psychesImage = "/images/psychesletter.PNG";
 const psychesImage1 = "/images/psychesletter1.PNG";
 const psychesImage2 = "/images/psychesletter2.PNG";
 const psychesImage3 = "/images/psychesletter3.PNG";
 const psychesImage4 = "/images/psychesletter4.PNG";
-
 const istritpayter = "/images/istritpayter.PNG";
 const istritpayter1 = "/images/istritpayter1.PNG";
 const istritpayter2 = "/images/istritpayter2.PNG";
@@ -21,31 +19,38 @@ const istritpayter4 = "/images/istritpayter4.PNG";
 
 import andreiPic from "./andreiPic.jpg";
 
-const htmlIcon = "/images/icons/html.PNG";
-const cssIcon = "/images/icons/css.PNG";
-const jsIcon = "/images/icons/js.PNG";
-const tsIcon = "/images/icons/ts.PNG";
-const reactIcon = "/images/icons/react.PNG";
-const nextjsIcon = "/images/icons/nextjs.PNG";
+const onepiece = "/videos/onepiece.mp4";
+const lagibini = "/videos/lagibini.mp4";
+const mist = "/videos/mist.mp4";
+const sincerely = "/videos/sincerely.mp4";
+const rubiks = "/videos/rubiks.mp4";
+const guitarheroxelectric = "/videos/guitarheroxelectric.mp4";
 
-const phpIcon = "/images/icons/php.PNG";
-const mysqlIcon = "/images/icons/mysql.PNG";
-const mongodbIcon = "/images/icons/mongodb.PNG";
+const htmlIcon = "/images/icons/html.png";
+const cssIcon = "/images/icons/css.png";
+const jsIcon = "/images/icons/js.png";
+const tsIcon = "/images/icons/ts.png";
+const reactIcon = "/images/icons/react.png";
+const nextjsIcon = "/images/icons/nextjs.png";
 
-const unityIcon = "/images/icons/unity.PNG";
-const flashIcon = "/images/icons/flash.PNG";
-const pythonIcon = "/images/icons/python.PNG";
-const androidIcon = "/images/icons/androidstudio.PNG";
+const phpIcon = "/images/icons/php.png";
+const mysqlIcon = "/images/icons/mysql.png";
+const mongodbIcon = "/images/icons/mongodb.png";
 
-const photoshopIcon = "/images/icons/photoshop.PNG";
-const canvaIcon = "/images/icons/canva.PNG";
-const graphicsgaleIcon = "/images/icons/graphicsgale.PNG";
-const tailwindIcon = "/images/icons/tailwind.PNG";
-const figmaIcon = "/images/icons/figma.PNG";
+const unityIcon = "/images/icons/unity.png";
+const flashIcon = "/images/icons/flash.png";
+const pythonIcon = "/images/icons/python.png";
+const androidIcon = "/images/icons/androidstudio.png";
 
-const filmoraIcon = "/images/icons/filmora.PNG";
-const capcutIcon = "/images/icons/capcut.PNG";
-const davinciIcon = "/images/icons/davinci.PNG";
+const photoshopIcon = "/images/icons/photoshop.png";
+const canvaIcon = "/images/icons/canva.png";
+const graphicsgaleIcon = "/images/icons/graphicsgale.png";
+const tailwindIcon = "/images/icons/tailwind.png";
+const figmaIcon = "/images/icons/figma.png";
+
+const filmoraIcon = "/images/icons/filmora.png";
+const capcutIcon = "/images/icons/capcut.png";
+const davinciIcon = "/images/icons/davinci.png";
 
 
 import React, { useEffect, useRef, useState } from "react";
@@ -455,8 +460,8 @@ function PrevIndex() {
                       
                 </div>
                 <div className={styles.videoContainer}>
-        {["lagibini.mp4", "onepiece.mp4",
-          "mist.mp4",  "sincerely.mp4", "rubiks.mp4", "guitarheroxelectric.mp4"
+        {[lagibini, onepiece,
+          mist,  sincerely, rubiks, guitarheroxelectric
         ].map((src, index) => (
           <video
             key={src}
@@ -472,7 +477,7 @@ function PrevIndex() {
             loop
             onClick={() => handleVideoClick(index)}
           >
-            <source src={`/videos/${src}`} type="video/mp4" />
+            <source src={`${src}`} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         ))}
