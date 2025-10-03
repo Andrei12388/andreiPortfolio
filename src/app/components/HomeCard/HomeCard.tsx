@@ -5,121 +5,107 @@ import styles from './HomeCard.module.css';
 import Image, { StaticImageData } from "next/image";
 import { useRouter } from "next/navigation";
 
+export default function HomeCard({ project }: {
+  project: {
+    title: string;
+    projectID: number;
+    image: string | StaticImageData;
+    image1: string | StaticImageData;
+    image2: string | StaticImageData;
+    image3: string | StaticImageData;
+    image4: string | StaticImageData;
+    duration: string;
+    language: string;
+    video: string | StaticImageData;
+  };
+}) {
+  const router = useRouter();
 
-
-export default function HomeCard({project}:{
-  
-    project: {
-        title: string;
-        projectID: number;
-         image: string | StaticImageData;
-        image1: string | StaticImageData;
-        image2: string | StaticImageData;
-        image3: string | StaticImageData;
-        image4: string | StaticImageData;
-        duration: string;
-        language: string;
-    };}){
-      const router = useRouter();
-      const [hovered, setHovered] = useState(false);
-      const [hoveredImage, setHoveredImage] = useState(project.image1);
-const [fading, setFading] = useState(false);
+  const [hoveredImage, setHoveredImage] = useState(project.image);
+  const [fading, setFading] = useState(false);
+  const [showVideo, setShowVideo] = useState(false);
 
   function hover(src: string | StaticImageData) {
     setFading(true);
-   
     setTimeout(() => {
       setHoveredImage(src);
-       setHovered(true);
-      setFading(false); 
-    }, 200); 
-  }
-
-  function hoverOut() {
-    setFading(true);
-    
-    setTimeout(() => {
-      setHovered(false);
-      setHoveredImage(project.image1);
-
       setFading(false);
     }, 200);
   }
 
-  function clickedImage(){
-    console.log('Image clicked!');
-     router.push(`/project/${project.projectID}`);
+  function hoverOut() {
+    setFading(true);
+    setTimeout(() => {
+      setHoveredImage(project.image);
+      setFading(false);
+    }, 200);
   }
-    return (
-      <div>
-    <div className={styles.container}>
-      <div className={styles.cardLeft}>
-        <Image
-             width={500}  
-  height={500} 
-        className={`${styles.image} ${fading ? styles.fadeOut : ""}`}
-      src={hovered ? hoveredImage : project.image}
-       onClick={clickedImage}
-      alt="Project Image"
-    />
-      </div>
-     
-      <div className={styles.cardRight}> 
-        <div>
-      <h2 className={styles.title}>{project.title}</h2>
-        </div>
-   
-    <div className={styles.imageHolder}
-        onMouseLeave={hoverOut}>
-     
-       <Image
-          width={500}  
-  height={500} 
-       onMouseEnter={() => hover(project.image1)}
-       
-        className={styles.imageSmall}
-         onClick={clickedImage}
-      src={project.image1}
-      alt="Soma Pic"
-    />
-    <Image
-      width={500}  
-  height={500} 
-    onMouseEnter={() => hover(project.image2)}
-        
-        className={styles.imageSmall}
-         onClick={clickedImage}
-      src={project.image2}
-      alt="Soma Pic"
-    />
-    <Image
-         width={500}  
-  height={500} 
-    onMouseEnter={() => hover(project.image3)}
-       
-        className={styles.imageSmall}
-         onClick={clickedImage}
-      src={project.image3}
-      alt="Soma Pic"
-    />
-    <Image
-     width={500}  // required
-  height={500} // required
-    onMouseEnter={() => hover(project.image4)}
-       
-        className={styles.imageSmall}
-         onClick={clickedImage}
-      src={project.image4}
-      alt="Soma Pic"
-    />
-    </div>
-    <div>
-    <p className={styles.p}>{project.duration} Development</p>
-    <p className={styles.p}>Language: {project.language}</p>
-      </div>
-      </div>
-</div>
-    </div>
-    )
 
+  function hoveredCover() {
+    setShowVideo(true);
+  }
+
+  function hoveredCoverOut() {
+    setShowVideo(false);
+  }
+
+  function clickedImage() {
+    router.push(`/project/${project.projectID}`);
+  }
+
+  return (
+    <div>
+      <div className={styles.container}>
+       <div className={styles.cardLeft}
+     onMouseEnter={hoveredCover}
+     onMouseLeave={hoveredCoverOut}>
+  {/* Video */}
+  <video
+    className={`${styles.video} ${showVideo ? styles.fadeIn : styles.fadeOut}`}
+    width="320"
+    height="240"
+    autoPlay
+    muted
+    loop
+  >
+    <source src={`${project.video}`} type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  {/* Image */}
+  <Image
+    width={500}
+    height={500}
+    className={`${styles.image} ${fading ? styles.fadeOut : ""}`}
+    src={hoveredImage || project.image}
+    onClick={clickedImage}
+    alt="Project Image"
+  />
+</div>
+
+
+        <div className={styles.cardRight}>
+          <h2 className={styles.title}>{project.title}</h2>
+
+          <div className={styles.imageHolder} onMouseLeave={hoverOut}>
+            {[project.image1, project.image2, project.image3, project.image4].map((img, idx) => (
+              <Image
+                key={idx}
+                width={500}
+                height={500}
+                onMouseEnter={() => hover(img)}
+                className={styles.imageSmall}
+                onClick={clickedImage}
+                src={img}
+                alt={`Preview ${idx + 1}`}
+              />
+            ))}
+          </div>
+
+          <p className={styles.p}>{project.duration} Development</p>
+          <p className={styles.p}>Language: {project.language}</p>
+        </div>
+      </div>
+    </div>
+  );
 }

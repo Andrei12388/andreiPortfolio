@@ -26,6 +26,10 @@ const sincerely = "https://7hlyo4xr2dlueknz.public.blob.vercel-storage.com/since
 const rubiks = "https://7hlyo4xr2dlueknz.public.blob.vercel-storage.com/rubiks.mp4";
 const guitarheroxelectric = "https://7hlyo4xr2dlueknz.public.blob.vercel-storage.com/guitarheroxelectric.mp4";
 
+const istritpayterVideo = "https://7hlyo4xr2dlueknz.public.blob.vercel-storage.com/istritpayterVideo.mp4";
+const psychesletterVideo = "https://7hlyo4xr2dlueknz.public.blob.vercel-storage.com/psychesletterVideo.mp4";
+
+
 const htmlIcon = "/images/icons/html.png";
 const cssIcon = "/images/icons/css.png";
 const jsIcon = "/images/icons/js.png";
@@ -131,12 +135,12 @@ export default function Home(){
       
 
     const projectsNum = [
-    {projectID: 1, title: "Psyche's Letter", duration: "22 days", active: false, language: "Action Script 2.0", image: psychesImage, image1: psychesImage1, image2: psychesImage2, image3: psychesImage3, image4: psychesImage4},
-    {projectID: 2,title: "Istrit Payter", duration: "23 days", active: false, language: "Html, Css, and Javascript", image: istritpayter, image1: istritpayter1, image2: istritpayter2, image3: istritpayter3, image4: istritpayter4},
-    {projectID: 3,title: "Game Website with API", duration: "3 days", active: false, language: "Javascript/Express/Node",image: blankImage, image1: blankImage, image2: blankImage, image3: blankImage, image4: blankImage},
-    {projectID: 4,title: "Next Js Project", duration: "5 days", active: false, language: "Next JS Framework", image: blankImage, image1: blankImage, image2: blankImage, image3: blankImage, image4: blankImage},
-    {projectID: 5,title: "Sample Project", duration: "5 days", active: false, language: "None", image: blankImage, image1: blankImage, image2: blankImage, image3: blankImage, image4: blankImage},
-    {projectID: 6,title: "Sample Project 2", duration: "5 days", active: false, language: "None", image: blankImage, image1: blankImage, image2: blankImage, image3: blankImage, image4: blankImage},
+    {projectID: 1, title: "Psyche's Letter", duration: "22 days", active: false, language: "Action Script 2.0", image: psychesImage, image1: psychesImage1, image2: psychesImage2, image3: psychesImage3, image4: psychesImage4, video: psychesletterVideo},
+    {projectID: 2,title: "Istrit Payter", duration: "23 days", active: false, language: "Html, Css, and Javascript", image: istritpayter, image1: istritpayter1, image2: istritpayter2, image3: istritpayter3, image4: istritpayter4, video: istritpayterVideo},
+    {projectID: 3,title: "Game Website with API", duration: "3 days", active: false, language: "Javascript/Express/Node",image: blankImage, image1: blankImage, image2: blankImage, image3: blankImage, image4: blankImage, video: sincerely},
+    {projectID: 4,title: "Next Js Project", duration: "5 days", active: false, language: "Next JS Framework", image: blankImage, image1: blankImage, image2: blankImage, image3: blankImage, image4: blankImage, video: sincerely},
+    {projectID: 5,title: "Sample Project", duration: "5 days", active: false, language: "None", image: blankImage, image1: blankImage, image2: blankImage, image3: blankImage, image4: blankImage, video: sincerely},
+    {projectID: 6,title: "Sample Project 2", duration: "5 days", active: false, language: "None", image: blankImage, image1: blankImage, image2: blankImage, image3: blankImage, image4: blankImage, video: sincerely},
    ]
 
    function NextIndex() {
