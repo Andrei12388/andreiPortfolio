@@ -3,46 +3,49 @@
 import HomeCard from "../components/HomeCard/HomeCard";
 import styles from './Home.module.css';
 
-const blankImage = "/images/blank.jpg";
+const blankImage = "../images/blank.jpg";
 
 //import SomaImage from "../images/Soma.png";
-const psychesImage = "/images/psychesletter.png";
-const psychesImage1 = "/images/psychesletter1.png";
-const psychesImage2 = "/images/psychesletter2.png";
-const psychesImage3 = "/images/psychesletter3.png";
-const psychesImage4 = "/images/psychesletter4.png";
-const istritpayter = "/images/istritpayter.png";
-const istritpayter1 = "/images/istritpayter1.png";
-const istritpayter2 = "/images/istritpayter2.png";
-const istritpayter3 = "/images/istritpayter3.png";
-const istritpayter4 = "/images/istritpayter4.png";
+const psychesImage = "/images/psychesletter.PNG";  // ✅ matches file
+
+const psychesImage1 = "/images/psychesletter1.PNG";
+const psychesImage2 = "/images/psychesletter2.PNG";
+const psychesImage3 = "/images/psychesletter3.PNG";
+const psychesImage4 = "/images/psychesletter4.PNG";
+
+const istritpayter = "/images/istritpayter.PNG";
+const istritpayter1 = "/images/istritpayter1.PNG";
+const istritpayter2 = "/images/istritpayter2.PNG";
+const istritpayter3 = "/images/istritpayter3.PNG";
+const istritpayter4 = "/images/istritpayter4.PNG";
 
 import andreiPic from "./andreiPic.jpg";
-const htmlIcon = "/images/icons/html.png";
-const cssIcon = "/images/icons/css.png";
-const jsIcon = "/images/icons/js.png";
-const tsIcon = "/images/icons/ts.png";
-const reactIcon = "/images/icons/react.png";
-const nextjsIcon = "/images/icons/nextjs.png";
 
-const phpIcon = "/images/icons/php.png";
-const mysqlIcon = "/images/icons/mysql.png";
-const mongodbIcon = "/images/icons/mongodb.png";
+const htmlIcon = "/images/icons/html.PNG";
+const cssIcon = "/images/icons/css.PNG";
+const jsIcon = "/images/icons/js.PNG";
+const tsIcon = "/images/icons/ts.PNG";
+const reactIcon = "/images/icons/react.PNG";
+const nextjsIcon = "/images/icons/nextjs.PNG";
 
-const unityIcon = "/images/icons/unity.png";
-const flashIcon = "/images/icons/flash.png";
-const pythonIcon = "/images/icons/python.png";
-const androidIcon = "/images/icons/androidstudio.png";
+const phpIcon = "/images/icons/php.PNG";
+const mysqlIcon = "/images/icons/mysql.PNG";
+const mongodbIcon = "/images/icons/mongodb.PNG";
 
-const photoshopIcon = "/images/icons/photoshop.png";
-const canvaIcon = "/images/icons/canva.png";
-const graphicsgaleIcon = "/images/icons/graphicsgale.png";
-const tailwindIcon = "/images/icons/tailwind.png";
-const figmaIcon = "/images/icons/figma.png";
+const unityIcon = "/images/icons/unity.PNG";
+const flashIcon = "/images/icons/flash.PNG";
+const pythonIcon = "/images/icons/python.PNG";
+const androidIcon = "/images/icons/androidstudio.PNG";
 
-const filmoraIcon = "/images/icons/filmora.png";
-const capcutIcon = "/images/icons/capcut.png";
-const davinciIcon = "/images/icons/davinci.png";
+const photoshopIcon = "/images/icons/photoshop.PNG";
+const canvaIcon = "/images/icons/canva.PNG";
+const graphicsgaleIcon = "/images/icons/graphicsgale.PNG";
+const tailwindIcon = "/images/icons/tailwind.PNG";
+const figmaIcon = "/images/icons/figma.PNG";
+
+const filmoraIcon = "/images/icons/filmora.PNG";
+const capcutIcon = "/images/icons/capcut.PNG";
+const davinciIcon = "/images/icons/davinci.PNG";
 
 
 import React, { useEffect, useRef, useState } from "react";
