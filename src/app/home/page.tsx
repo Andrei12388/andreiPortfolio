@@ -19,12 +19,12 @@ const istritpayter4 = "/images/istritpayter4.PNG";
 
 import andreiPic from "./andreiPic.jpg";
 
-const onepiece = "/videos/onepiece.mp4";
-const lagibini = "/videos/lagibini.mp4";
-const mist = "/videos/mist.mp4";
-const sincerely = "/videos/sincerely.mp4";
-const rubiks = "/videos/rubiks.mp4";
-const guitarheroxelectric = "/videos/guitarheroxelectric.mp4";
+const onepiece = "https://7hlyo4xr2dlueknz.public.blob.vercel-storage.com/onepiece.mp4";
+const lagibini = "https://7hlyo4xr2dlueknz.public.blob.vercel-storage.com/lagibini.mp4";
+const mist = "https://7hlyo4xr2dlueknz.public.blob.vercel-storage.com/mist.mp4";
+const sincerely = "https://7hlyo4xr2dlueknz.public.blob.vercel-storage.com/sincerely.mp4";
+const rubiks = "https://7hlyo4xr2dlueknz.public.blob.vercel-storage.com/rubiks.mp4";
+const guitarheroxelectric = "https://7hlyo4xr2dlueknz.public.blob.vercel-storage.com/guitarheroxelectric.mp4";
 
 const htmlIcon = "/images/icons/html.png";
 const cssIcon = "/images/icons/css.png";
