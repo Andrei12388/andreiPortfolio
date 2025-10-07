@@ -42,3 +42,10 @@ body {
     margin-top: 50px;
 }
 
+/* globals.css */
+@media (max-width: 1024px) {
+  html {
+    width: 1280px;
+    overflow-x: scroll; /* allows scrolling instead of compressing */
+  }
+}

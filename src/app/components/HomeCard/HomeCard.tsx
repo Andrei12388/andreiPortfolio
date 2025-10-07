@@ -104,6 +104,7 @@ export default function HomeCard({ project }: {
 
           <p className={styles.p}>{project.duration} Development</p>
           <p className={styles.p}>Language: {project.language}</p>
+          <p className={styles.p} onClick={clickedImage}>Click this or the image for More Details {">"}{">"}</p>
         </div>
       </div>
     </div>
