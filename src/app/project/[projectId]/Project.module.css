@@ -1,7 +1,115 @@
 
 .projectCard{
+    margin-top: 20px;
+    justify-self: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    
+    width: 50%;
+    background-color: rgb(36, 36, 36);
+}
+.header{
+    position: relative;
+    font-size: 12px;
+    font-weight: bold;
+    top: 0;
+    width: 100%;
+    background-color: rgb(118, 2, 2);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: left;
+    padding: 2px;
+    padding-left: 20px;
+    color: var(--foreground-rgb);
+    z-index: 1;
+}
+
+.headerMid{
+   left: 0px;
+   top: 12px;
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    background-color: rgb(101, 1, 1);
+    z-index: -1;
+}
+
+.headerBarline{
+    height: 1px;
+    width: 96%;
+    background-color: rgba(128, 128, 128, 0.59);
+    
+}
+
+.content{
+    
+    padding-left: 20px;
+    text-align: left;
+}
+
+.title{
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.span{
+    color: red;
+    font-weight: bold;
+}
+
+.greyText{
+    color: rgba(128, 128, 128, 0.59);
+    font-size: 10px;
+}
+
+.image{
+    justify-self: center;
+    
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.containerBottom{
+    margin-top: 20px;
+    height: 50px;
+    display: flex;
     justify-content: center;
-    align-items: center;
+    justify-self: center;
+    width: 90%;
+    align-content: center;
+    align-items: end;
+    border-radius: 2px;
+    background-image: linear-gradient(to top, #2b2b2b, #151515);
+    border: 1px solid black;
+}
+.bottomNav{
     justify-items: center;
-    border: 3px solid red;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-content: center;
+    text-align: center;
+    height: 35px;
+    width: auto;
+    text-align: center;
+    
+    border: 1px solid black;
+    border-radius: 2px;
+    background-image: linear-gradient(to top, #393939, #535354);
+   
+}
+.bottomBox{
+    height: 100px;
+    width: 90%;
+    
+    justify-self: center;
+    background-image: linear-gradient(to top, #393939, #454546);
+   
+}
+.bottomBoxContent{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }

@@ -5,7 +5,6 @@ import styles from './Home.module.css';
 
 const blankImage = "/images/blank.jpg";
 
-//import SomaImage from "../images/Soma.png";
 const psychesImage = "/images/psychesletter.PNG";
 const psychesImage1 = "/images/psychesletter1.PNG";
 const psychesImage2 = "/images/psychesletter2.PNG";

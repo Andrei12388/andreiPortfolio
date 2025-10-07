@@ -67,6 +67,7 @@ export default function HomeCard({ project }: {
     autoPlay
     muted
     loop
+    onClick={clickedImage}
   >
     <source src={`${project.video}`} type="video/mp4" />
     Your browser does not support the video tag.
