@@ -1,6 +1,8 @@
+
 import { Metadata } from "next";
 import styles from './Project.module.css';
-import Image from "next/image";
+import ImageVideoSlide from "../../components/ImageVideoSlide/ImageVideoSlide";
+import ContentsCard from "../../components/ContentsCard/ContentsCard";
 
 const psychesImage = "/images/psychesletter.PNG";
 const psychesImage1 = "/images/psychesletter1.PNG";
@@ -18,12 +20,114 @@ const psychesletterVideo = "https://7hlyo4xr2dlueknz.public.blob.vercel-storage.
 const blankImage = "/images/blank.jpg";
 
 const projectsNum = [
-    { projectID: 1, title: "Psyche's Letter", duration: "22 days", active: false, language: "Action Script 2.0", image: psychesImage , date: "July 2023", genre: "Educational Game", relDate: "August 2023", fileSize: "127 MB", mirrors: "github", video: psychesletterVideo},
-    { projectID: 2, title: "Istrit Payter", duration: "23 days", active: false, language: "Html, Css, and Javascript", image: istritpayter , date: "September 2025", genre: "Web-based/Mobile Game", relDate: "Coming soon", fileSize: "145 MB", mirrors: "itch.io, github",video: istritpayterVideo},
-    { projectID: 3, title: "Game Website with API", duration: "3 days", active: false, image: blankImage , date: "2020"},
-    { projectID: 4, title: "Next Js Project", duration: "5 days", active: false, image: blankImage, date: "2020" },
-    { projectID: 5, title: "Sample Project", duration: "5 days", active: false, image: blankImage , date: "2020"},
-    { projectID: 6, title: "Sample Project 2", duration: "5 days", active: false, image: blankImage , date: "2020"},
+  {
+    projectID: 1,
+    title: "Psyche's Letter",
+    duration: "22 days",
+    active: false,
+    language: "Action Script 2.0",
+    image: psychesImage,
+    date: "July 2023",
+    genre: "Educational Game",
+    relDate: "August 2023",
+    fileSize: "127 MB",
+    mirrors: "github",
+    video: psychesletterVideo,
+    image1: psychesImage1,
+    image2: psychesImage2,
+    image3: psychesImage3,
+    image4: psychesImage4,
+  },
+  {
+    projectID: 2,
+    title: "Istrit Payter",
+    duration: "23 days",
+    active: false,
+    language: "Html, Css, and Javascript",
+    image: istritpayter,
+    date: "September 2025",
+    genre: "Web-based/Mobile Game",
+    relDate: "Coming soon",
+    fileSize: "145 MB",
+    mirrors: "itch.io, github",
+    video: istritpayterVideo,
+    image1: istritpayter1,
+    image2: istritpayter2,
+    image3: istritpayter3,
+    image4: istritpayter4,
+  },
+  {
+    projectID: 3,
+    title: "Game Website with API",
+    duration: "3 days",
+    active: false,
+    language: "",
+    genre: "",
+    relDate: "",
+    fileSize: "",
+    mirrors: "",
+    video: "",
+    image: blankImage,
+    image1: "",
+    image2: "",
+    image3: "",
+    image4: "",
+    date: "2020",
+  },
+  {
+    projectID: 4,
+    title: "Next Js Project",
+    duration: "5 days",
+    active: false,
+    language: "",
+    genre: "",
+    relDate: "",
+    fileSize: "",
+    mirrors: "",
+    video: "",
+    image: blankImage,
+    image1: "",
+    image2: "",
+    image3: "",
+    image4: "",
+    date: "2020",
+  },
+  {
+    projectID: 5,
+    title: "Sample Project",
+    duration: "5 days",
+    active: false,
+    language: "",
+    genre: "",
+    relDate: "",
+    fileSize: "",
+    mirrors: "",
+    video: "",
+    image: blankImage,
+    image1: "",
+    image2: "",
+    image3: "",
+    image4: "",
+    date: "2020",
+  },
+  {
+    projectID: 6,
+    title: "Sample Project 2",
+    duration: "5 days",
+    active: false,
+    language: "",
+    genre: "",
+    relDate: "",
+    fileSize: "",
+    mirrors: "",
+    video: "",
+    image: blankImage,
+    image1: "",
+    image2: "",
+    image3: "",
+    image4: "",
+    date: "2020",
+  },
   ];
   
 type Props = {
@@ -37,6 +141,7 @@ export const generateMetadata = async ({ params }: Props): Promise<Metadata> => 
   const projectNum:number = Number(projectId);
   const projectTitle  = projectsNum[projectNum-1].title;
   const id = Number(projectId);
+  
 
   if (!Number.isInteger(id)) {
     return { title: "Project not found" };
@@ -63,6 +168,7 @@ export default async function ProductId({ params }: Props) {
     </>
     
   }
+  
 
   const project = projectsNum[id - 1];
 
@@ -80,13 +186,7 @@ export default async function ProductId({ params }: Props) {
       <div className={styles.greyText}>{project.genre}</div>
       
       <div className={styles.headerBarline}></div>
-    <Image
-        width={400}
-        height={300}
-        className={styles.image}
-        src={project.image}
-        alt="Project Image"
-      />
+      <ImageVideoSlide project={project}/>
       </div>
       <h2><span className={styles.span}>Title: </span>{project.title}</h2>
       <h2><span className={styles.span}>Development Date: </span>{project.date}</h2>
@@ -95,15 +195,8 @@ export default async function ProductId({ params }: Props) {
       <h2><span className={styles.span}>File Size: </span>{project.fileSize}</h2>
       <h2><span className={styles.span}>Mirrors/Links: </span>{project.mirrors}</h2>
       </div>
-      <div className={styles.containerBottom}>
-        <div className={styles.bottomNav}> Description</div>
-        <div className={styles.bottomNav}> Screenshots</div>
-        <div className={styles.bottomNav}> Install Notes</div>
-         <div className={styles.bottomNav}> Link Download</div>
-      </div>
-      <div className={styles.bottomBox}><div className={styles.bottomBoxContent}>
-      This is a project called {project.title}. It is a {project.genre} game developed using {project.language}. The game was developed in {project.duration} and was released on {project.relDate}. The file size of the game is {project.fileSize}. You can find the game on the following mirrors/links: {project.mirrors}.
-        </div></div>
+      <ContentsCard project={project}/>
+      
     </div>
     
   );
