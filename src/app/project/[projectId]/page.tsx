@@ -15,8 +15,8 @@ const istritpayter2 = "/images/istritpayter2.PNG";
 const istritpayter3 = "/images/istritpayter3.PNG";
 const istritpayter4 = "/images/istritpayter4.PNG";
 
-const istritpayterVideo = "https://7hlyo4xr2dlueknz.public.blob.vercel-storage.com/istritpayterVideo.mp4";
-const psychesletterVideo = "https://7hlyo4xr2dlueknz.public.blob.vercel-storage.com/psychesletterVideo.mp4";
+const istritpayterVideo = "https://kgmutreakokomnvevvbm.supabase.co/storage/v1/object/public/videos/istritpayterVideo.mp4";
+const psychesletterVideo = "https://kgmutreakokomnvevvbm.supabase.co/storage/v1/object/public/videos/psychesletterVideo.mp4";
 const blankImage = "/images/blank.jpg";
 
 const projectsNum = [
@@ -37,6 +37,8 @@ const projectsNum = [
     image2: psychesImage2,
     image3: psychesImage3,
     image4: psychesImage4,
+    description2: "This is a project called Psyche's Letter. It is an Educational game developed using Action Script 2.0. The game was developed in 22 days and was released on August 2023. The file size of the game is 127 MB. The game can be played on github.",
+    description1: "Psyche's Letter is an educational game that aims to teach players about the mythological story of Psyche and Eros. The game is set in a beautifully designed world where players take on the role of Psyche."
   },
   {
     projectID: 2,
@@ -55,6 +57,8 @@ const projectsNum = [
     image2: istritpayter2,
     image3: istritpayter3,
     image4: istritpayter4,
+    description2: "This is a project called Istrit Payter. It is a Web-based/Mobile game developed using Html, Css, and Javascript. The game was developed in 23 days and is set to be released soon. The file size of the game is 145 MB. The game can be played on itch.io and github.",
+    description1: "Istrit Payter is a web-based/mobile game that aims to provide players with an engaging and interactive experience. The game is set in a vibrant and colorful world where players take on the role of a character who must navigate through various challenges and obstacles to achieve their goals. The game features intuitive controls, stunning graphics, and an immersive storyline that will keep players hooked from start to finish.",
   },
   {
     projectID: 3,
@@ -73,6 +77,8 @@ const projectsNum = [
     image3: "",
     image4: "",
     date: "2020",
+    description1: "This is a project called Game Website with API. It is a game website developed using various web technologies. The game was developed in 3 days and was released in 2020. The file size of the game is not specified. The game can be found on various mirrors/links.",
+    description2: "The Game Website with API project is a web-based platform that allows users to access and play various games through an API. The website features a user-friendly interface, allowing players to easily navigate and find their favorite games. The API integration enables seamless communication between the website and the game servers, ensuring a smooth gaming experience for users.",
   },
   {
     projectID: 4,
@@ -91,6 +97,8 @@ const projectsNum = [
     image3: "",
     image4: "",
     date: "2020",
+    description1: "This is a project called Next Js Project. It is a web application developed using Next.js framework. The game was developed in 5 days and was released in 2020. The file size of the game is not specified. The game can be found on various mirrors/links.",
+    description2: "The Next Js Project is a modern web application that leverages the power of the Next.js framework to deliver a fast and responsive user experience. The project features server-side rendering, static site generation, and API routes, allowing for seamless integration with backend services. The application is designed with a focus on performance, scalability, and maintainability, making it an ideal choice for building dynamic web applications.",
   },
   {
     projectID: 5,
@@ -109,6 +117,8 @@ const projectsNum = [
     image3: "",
     image4: "",
     date: "2020",
+    description1: "This is a project called Sample Project. It is a sample game developed using various technologies. The game was developed in 5 days and was released in 2020. The file size of the game is not specified. The game can be found on various mirrors/links.",
+    description2: "The Sample Project is a demonstration of various game development techniques and concepts. The project showcases different gameplay mechanics, graphics, and sound design elements to provide an engaging experience for players. The game is designed to be easily customizable and extendable, allowing developers to build upon the existing framework and create their own unique games.",
   },
   {
     projectID: 6,
@@ -127,6 +137,8 @@ const projectsNum = [
     image3: "",
     image4: "",
     date: "2020",
+    description1: "This is a project called Sample Project 2. It is a sample game developed using various technologies. The game was developed in 5 days and was released in 2020. The file size of the game is not specified. The game can be found on various mirrors/links.",
+    description2: "The Sample Project 2 is a continuation of the original Sample Project, featuring new gameplay mechanics, improved graphics, and enhanced sound design elements. The project aims to provide players with an even more engaging and immersive experience, while also showcasing the latest advancements in game development techniques. The game is designed to be easily customizable and extendable, allowing developers to build upon the existing framework and create their own unique games.",
   },
   ];
   

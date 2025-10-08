@@ -18,15 +18,15 @@ const istritpayter4 = "/images/istritpayter4.PNG";
 
 import andreiPic from "./andreiPic.jpg";
 
-const onepiece = "https://7hlyo4xr2dlueknz.public.blob.vercel-storage.com/onepiece.mp4";
-const lagibini = "https://7hlyo4xr2dlueknz.public.blob.vercel-storage.com/lagibini.mp4";
-const mist = "https://7hlyo4xr2dlueknz.public.blob.vercel-storage.com/mist.mp4";
-const sincerely = "https://7hlyo4xr2dlueknz.public.blob.vercel-storage.com/sincerely.mp4";
-const rubiks = "https://7hlyo4xr2dlueknz.public.blob.vercel-storage.com/rubiks.mp4";
-const guitarheroxelectric = "https://7hlyo4xr2dlueknz.public.blob.vercel-storage.com/guitarheroxelectric.mp4";
+const onepiece = "https://kgmutreakokomnvevvbm.supabase.co/storage/v1/object/public/videos/onepiece.mp4";
+const lagibini = "https://kgmutreakokomnvevvbm.supabase.co/storage/v1/object/public/videos/lagibini.mp4";
+const mist = "https://kgmutreakokomnvevvbm.supabase.co/storage/v1/object/public/videos/mist.mp4";
+const sincerely = "https://kgmutreakokomnvevvbm.supabase.co/storage/v1/object/public/videos/sincerely.mp4";
+const rubiks = "https://kgmutreakokomnvevvbm.supabase.co/storage/v1/object/public/videos/rubiks.mp4";
+const guitarheroxelectric = "https://kgmutreakokomnvevvbm.supabase.co/storage/v1/object/public/videos/guitarheroxelectric.mp4";
 
-const istritpayterVideo = "https://7hlyo4xr2dlueknz.public.blob.vercel-storage.com/istritpayterVideo.mp4";
-const psychesletterVideo = "https://7hlyo4xr2dlueknz.public.blob.vercel-storage.com/psychesletterVideo.mp4";
+const istritpayterVideo = "https://kgmutreakokomnvevvbm.supabase.co/storage/v1/object/public/videos/istritpayterVideo.mp4";
+const psychesletterVideo = "https://kgmutreakokomnvevvbm.supabase.co/storage/v1/object/public/videos/psychesletterVideo.mp4";
 
 
 const htmlIcon = "/images/icons/html.png";

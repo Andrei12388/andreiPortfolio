@@ -18,6 +18,8 @@ type ProjectProps = {
   fileSize: string;
   mirrors: string;
   video: string | StaticImageData;
+  description1: string;
+  description2: string;
 };
 
 export default function ContentsCard({ project }: { project: ProjectProps }) {
@@ -52,13 +54,10 @@ export default function ContentsCard({ project }: { project: ProjectProps }) {
       <div className={styles.bottomBox}>
         {activeTab === "Description" && (
           <div className={styles.bottomBoxContent}>
-            This is a project called <b>{project.title}</b>. It is a{" "}
-            <b>{project.genre}</b> game developed using{" "}
-            <b>{project.language}</b>. The game was developed in{" "}
-            <b>{project.duration}</b> and was released on{" "}
-            <b>{project.relDate}</b>. The file size of the game is{" "}
-            <b>{project.fileSize}</b>. You can find the game on the following
-            mirrors/links: {project.mirrors}.
+            
+            <p>{project.description1}</p>
+            <br></br>
+            <p>{project.description2}</p>
           </div>
         )}
 
