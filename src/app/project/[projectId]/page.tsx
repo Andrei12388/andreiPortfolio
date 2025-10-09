@@ -37,8 +37,31 @@ const projectsNum = [
     image2: psychesImage2,
     image3: psychesImage3,
     image4: psychesImage4,
-    description2: "This is a project called Psyche's Letter. It is an Educational game developed using Action Script 2.0. The game was developed in 22 days and was released on August 2023. The file size of the game is 127 MB. The game can be played on github.",
-    description1: "Psyche's Letter is an educational game that aims to teach players about the mythological story of Psyche and Eros. The game is set in a beautifully designed world where players take on the role of Psyche."
+    installnote1: "Download the game and extract the contents of the rar file to a folder on your computer.",
+    installnote2: "Install first the Adobe Flash Professional 8 for you to have the adobe flash player.",
+    installnote3: "Extract the psyches letter game.rar contents.",
+    installnote4: "To run the game, open the Psyche's Letter.swf inside the Psyche's letter folder.",
+    installnote5: "Controls: Use the mouse to navigate through the game. Arrow keys for movement and space for jump. Click on objects and options to interact with them. Follow the on-screen instructions to progress through the game.",
+   
+    link1: "https://www.mediafire.com/file/w5vtrdjx1q0f44f/Psyche%2527s_Letter_Game_2023.rar/file",
+    link2: "https://www.4shared.com/rar/aekKiJPmjq/Psyches_Letter_Game_2023.html?",
+    link3: "https://github.com/Andrei12388/psychesletter2023",
+    linknote: "Note: Link 1 - Mediafire (Game), Link 2 - 4shared (Game), Link 3 - Github (Source Code)",
+    sysreq1: "OS: Windows 7/8/10 (64-bit)",
+    sysreq2: "Application: Adobe Flash Player",
+    sysreq3: "Memory: 2 GB RAM",
+    sysreq4: "Storage: 150 MB available space",
+    description1: "Coding a Game Without Any Experience in Coding.",
+    description2: "Psyches Letter (2023) — Gamification Project",
+    description3: "In 2023, during our Gamification subject, my group and I were tasked to create an educational game. At the time, I had absolutely no background in coding—I wasn’t an IT student, nor had I taken any programming courses. Despite that, this project became the turning point that ignited my passion for learning how to code.",
+    description4: "Our instructor gave us only two weeks to complete the game, and the project was expected to be made simply through PowerPoint with hyperlinks. However, I remembered my Animation strand back in senior high school, where we used Adobe Flash for creating short animations. I also recalled that many classic online games, such as those found on Y8 and Friv, were built with the same software.",
+    description5: "Driven by curiosity and a long-held dream—since I was seven years old—to become a programmer, I decided to take a risk. I proposed to my group that we use Adobe Flash instead of PowerPoint to create our game.",
+    description6: "At that point, I had no formal knowledge of programming. I couldn’t rely on ChatGPT for help since I was using ActionScript 2.0, an old and mostly outdated language that modern AI tools struggle to interpret. So, I turned to YouTube tutorials, teaching myself the fundamentals of game development step by step.",
+    description7: "The process was both challenging and rewarding. Despite the tight deadline and our lack of experience, we managed to complete the game successfully—without any major conflicts, just a lot of teamwork and late nights. Looking back, it was an incredible learning experience that taught me more than any textbook could.",
+    description8: "Lessons Learned:",
+    description9: "This project taught me that anything can be learned with willingness, passion, and courage. Taking risks is often the key to growth. If we had simply followed the easy route—making a PowerPoint game instead of building something from scratch—I might never have discovered my love for coding.",
+    description10: "Team Members: John Reniel Llavore, Kenneth Gascon Jermice, William Capales Bantilan, Levi Troy Selga, Gabriel Ordaniel, James Mantes, Vincent Lumpas",
+    description11: "To my teammates—thank you for being part of this milestone. You were my stepping stones toward becoming who I aspire to be: a programmer. The journey ahead may still be long, but I believe that with perseverance and faith, we’ll all achieve our dreams. ❤️",
   },
   {
     projectID: 2,
@@ -49,7 +72,7 @@ const projectsNum = [
     image: istritpayter,
     date: "September 2025",
     genre: "Web-based/Mobile Game",
-    relDate: "Coming soon",
+    relDate: "COMING SOON",
     fileSize: "145 MB",
     mirrors: "itch.io, github",
     video: istritpayterVideo,
@@ -57,8 +80,26 @@ const projectsNum = [
     image2: istritpayter2,
     image3: istritpayter3,
     image4: istritpayter4,
-    description2: "This is a project called Istrit Payter. It is a Web-based/Mobile game developed using Html, Css, and Javascript. The game was developed in 23 days and is set to be released soon. The file size of the game is 145 MB. The game can be played on itch.io and github.",
-    description1: "Istrit Payter is a web-based/mobile game that aims to provide players with an engaging and interactive experience. The game is set in a vibrant and colorful world where players take on the role of a character who must navigate through various challenges and obstacles to achieve their goals. The game features intuitive controls, stunning graphics, and an immersive storyline that will keep players hooked from start to finish.",
+    installnote1: "The game is currently in development and will be available soon on itch.io and GitHub.",
+    sysreq1: "Platforms: Mobile (Apk) and PC (Web Browser)", 
+    sysreq2: "OS: Windows 7/8/10 (64-bit) or Android 5.0+ OS",
+    sysreq3: "Memory: 1 GB RAM",
+    sysreq4: "Storage: 100 MB available space",
+
+    link1: "https://github.com/Andrei12388/istritpayter",
+    linknote: "Note: Link 1 - Github (Source Code)",
+
+    description1: "Meme to Game.",
+    description2: "Istrit Payter (2025) — Web/Mobile Game Project",
+    description3: "This was my attempt to create the infamous Istrit Payter meme by IJI into a game. The idea starts when I was browsing through Facebook last month of July (2025) and stumbled upon a hilarious meme about a character named Istrit Payter. The meme featured Malupiton who fights other pinoy meme characters with super powers, accompanied by humorous captions that poked fun at various aspects of Pinoy culture.",
+    description4: "While I am learning javascript and making sample games with that language, I had thought it would be better to use the language to make the meme into a game. So without any planning, I just go with the flow making the game developing the fighters, stage, ui, controls handlers, and much more logic in pure javascript and from scratch.",
+    description5: "Tools used in making the game:",
+    description6: "1. Visual Studio Code - for coding the game logic and structure using HTML, CSS, and JavaScript.",
+    description7: "2. Adobe Photoshop/Graphics Gale - for creating and editing the game graphics, including characters, sprites, backgrounds, and UI elements.",
+    description8: "3. Audacity - for editing sound effects and background music for the game.",
+    description9: "4. Browser Developer Tools - for testing and debugging the game during development like console logging and finding the appropriate key values for controls.",
+    description10: "Funny how it was stored first in my telegram because I don't have github and I don't know how to use it back then. But now I have a github account and I uploaded the updated source code there.",
+    description11: "You can check the game and source code on the links section. Thank you for those who support me in making this game. Special thanks to sir IJI for making the original meme and inspiring me to make this game.❤️",
   },
   {
     projectID: 3,
@@ -204,7 +245,7 @@ export default async function ProductId({ params }: Props) {
       <h2><span className={styles.span}>Development Date: </span>{project.date}</h2>
       <h2><span className={styles.span}>Release Date: </span>{project.relDate}</h2>
       <h2><span className={styles.span}>Language: </span>{project.language}</h2>
-      <h2><span className={styles.span}>File Size: </span>{project.fileSize}</h2>
+      <h2><span className={styles.span}>Project File Size: </span>{project.fileSize}</h2>
       <h2><span className={styles.span}>Mirrors/Links: </span>{project.mirrors}</h2>
       </div>
       <ContentsCard project={project}/>

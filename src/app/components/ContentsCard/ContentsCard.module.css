@@ -70,3 +70,33 @@
     align-content: center;
     text-align: center;
 }
+
+.link{
+    color: #f6ee09;
+}
+
+.linkbox{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+.linkContainer{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   width: 5em;
+   border-radius: 5px;
+   border: 1px solid rgb(56, 56, 56);
+}
+.linkContainer:hover{
+    border: 1px solid #b5a907;
+    background-color: rgba(181, 169, 7, 0.2);
+}
+.link:hover{
+    color: #b5a907;
+    text-decoration: underline;
+}
