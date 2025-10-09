@@ -131,10 +131,11 @@ export default function ContentsCard({ project }: { project: ProjectProps }) {
         {activeTab === "Screenshots" && (
           <div className={styles.bottomBoxContent}>
             <div className={styles.screenshots}>
-              <Image src={project.image1} alt="Screenshot 1" width={700} height={160} />
-              <Image src={project.image2} alt="Screenshot 2" width={700} height={160} />
-              <Image src={project.image3} alt="Screenshot 3" width={700} height={160} />
-              <Image src={project.image4} alt="Screenshot 4" width={700} height={160} />
+              <Image src={project.image} alt="Screenshot 1" width={700} height={160} />
+              <Image src={project.image1} alt="Screenshot 2" width={700} height={160} />
+              <Image src={project.image2} alt="Screenshot 3" width={700} height={160} />
+              <Image src={project.image3} alt="Screenshot 4" width={700} height={160} />
+              <Image src={project.image4} alt="Screenshot 5" width={700} height={160} />
             </div>
           </div>
         )}

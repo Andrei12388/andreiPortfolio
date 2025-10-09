@@ -14,7 +14,7 @@ export default function ImageVideoSlide({ project }: {
     image4: string | StaticImageData;
     duration: string;
     language: string;
-    video: string | StaticImageData;
+    video?: string | StaticImageData;
     genre: string;
     relDate: string;
     fileSize: string;
@@ -38,11 +38,12 @@ export default function ImageVideoSlide({ project }: {
      onMouseLeave={hoveredCoverOut}
       >
       <video
-    className={`${styles.video} ${showVideo ? styles.fadeIn : styles.fadeOut}`}
+    className={`${styles.video}`}
     width="320"
     height="240"
     autoPlay
     muted
+    controls
     loop
   >
     <source src={`${project.video}`} type="video/mp4" />
