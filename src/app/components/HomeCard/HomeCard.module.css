@@ -87,11 +87,33 @@
     scale: 1.05;
     filter: brightness(100%);
 }
-
+.textContainer{
+    margin-top: 10px;
+}
 .p{
+   
     margin-left: 10px;
     font-size: 12px;
     text-wrap: nowrap;
+}
+.p1{
+    background-color: white;
+    border-radius: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: fit-content;
+    margin-top: 5px;
+    margin-left: 10px;
+    font-size: 15px;
+    color: black;
+    filter: brightness(70%);
+    text-wrap: wrap;
+    transition: all 0.2s ease-in-out;
+}
+.p1:hover{
+    scale: 1.1;
+    filter: brightness(100%);
+    color: var(--pinkcolor);
 }
 .video{
     position: absolute;

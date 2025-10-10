@@ -102,10 +102,12 @@ export default function HomeCard({ project }: {
               />
             ))}
           </div>
-
-          <p className={styles.p}>{project.duration} Development</p>
+            <div className={styles.textContainer}>
+            <p className={styles.p}>{project.duration} Development</p>
           <p className={styles.p}>Language: {project.language}</p>
-          <p className={styles.p} onClick={clickedImage}>Click this or the image for More Details {">"}{">"}</p>
+          <div className={styles.p1} onClick={clickedImage}><p  >View Project</p></div>
+          
+            </div>
         </div>
       </div>
     </div>
