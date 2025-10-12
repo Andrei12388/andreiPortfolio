@@ -2,40 +2,49 @@
 
 import { useEffect, useRef } from 'react'
 import { usePathname } from 'next/navigation'
-import nProgress from 'nprogress'
 import 'nprogress/nprogress.css'
-
-// Configure the progress bar appearance
-nProgress.configure({
-  showSpinner: false,
-  speed: 400,
-  minimum: 0.15,
-  easing: 'ease',
-})
 
 export default function ProgressBar() {
   const pathname = usePathname()
   const isFirstRender = useRef(true)
-  nProgress.start()
+
+  // ⛔ Prevents server-side errors: only run on client
+  if (typeof window !== 'undefined') {
+    import('nprogress').then((nProgress) => {
+      const np = nProgress.default
+      np.configure({
+        showSpinner: false,
+        speed: 400,
+        minimum: 0.15,
+        easing: 'ease',
+      })
+      // ✅ Immediately start progress bar
+      np.start()
+    })
+  }
+
   useEffect(() => {
-    // Skip progress on initial render (first load)
-   
-    if (isFirstRender.current) {
-      isFirstRender.current = false
-      return
-    }
+    if (typeof window === 'undefined') return
 
-    // Start the progress bar
-    nProgress.start()
+    import('nprogress').then((nProgress) => {
+      const np = nProgress.default
 
-    // Smoothly complete after navigation
-    const timer = setTimeout(() => {
-      nProgress.done(true)
-    }, 400)
+      // Skip progress on initial render
+      if (isFirstRender.current) {
+        isFirstRender.current = false
+        return
+      }
 
-    return () => {
-      clearTimeout(timer)
-    }
+      // ✅ Start progress bar when pathname changes
+      np.start()
+
+      // ✅ Complete after small delay
+      const timer = setTimeout(() => {
+        np.done(true)
+      }, 400)
+
+      return () => clearTimeout(timer)
+    })
   }, [pathname])
 
   return null
