@@ -3,6 +3,7 @@ import Footer from "./Footer/page"
 import Header from "./Header/page"
 import './global.css'
 import { Metadata } from "next"
+import ProgressBar from "./components/ProgressBar/ProgressBar"
 
 
 export const metadata: Metadata = {
@@ -22,6 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <ProgressBar />
         <CustomCursor/>
         <Header></Header>
         <div className="childrenContainer">

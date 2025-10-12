@@ -28,6 +28,11 @@
   cursor: none !important;
 }
 
+#nprogress .bar {
+  background: rgb(255, 255, 2);
+  height: 3px;
+}
+
 body {
     display: flex;
     flex-direction: column;
