@@ -346,3 +346,21 @@
     font-size: 1em;
     font-weight: bold;
 }
+
+.contactsContainer{
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    margin-left: 10em;
+    
+    width: 30em;
+}
+
+.contacts{
+    scale: 1.1;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+}

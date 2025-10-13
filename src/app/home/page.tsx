@@ -65,7 +65,10 @@ const filmoraIcon = "/images/icons/filmora.png";
 const capcutIcon = "/images/icons/capcut.png";
 const davinciIcon = "/images/icons/davinci.png";
 
-const pupImage = "/images/PUPlogo.PNG";
+const emailIcon = "/images/icons/email.png";
+const phoneIcon = "/images/icons/phone.png";
+
+const pupImage = "/images/PUPlogo.jpg";
 const amlacImage = "/images/amlacImage.jpg";
 
 
@@ -86,6 +89,8 @@ export default function Home(){
   const section2Ref = useRef<HTMLDivElement | null>(null);
   const section3Ref = useRef<HTMLDivElement | null>(null);
   const section4Ref = useRef<HTMLDivElement | null>(null);
+  const section5Ref = useRef<HTMLDivElement | null>(null);
+
   const [percentShow1, setpercentShow1] = useState(false);
   const [percentShow2, setpercentShow2] = useState(false);
   const [percentShow3, setpercentShow3] = useState(false);
@@ -180,6 +185,9 @@ export default function Home(){
       if (section === "section4") {
         section4Ref.current?.scrollIntoView({ behavior: "smooth" });
       }
+      if (section === "section5") {
+        section5Ref.current?.scrollIntoView({ behavior: "smooth" });
+      }
     };
 
     window.addEventListener("scrollToSection", handler);
@@ -226,7 +234,7 @@ function PrevIndex() {
           </h1>
         </div>
         <div className={styles.bioText}>
-         <h1 className={styles.pageText}>Although I did not pursue a formal IT degree, I have been self-taught in coding since <span className={styles.span}>2023</span>, driven by my long-time dream of becoming a programmer. This website showcases my projects along with a few of my personal hobbies, reflecting both my creativity and dedication to lifelong learning.</h1>
+         <h1 className={styles.pageText}>Although I did not pursue a formal IT degree, I have been self-taught in coding since <span className={styles.span}>2025</span>, driven by my long-time dream of becoming a programmer. This website showcases my projects along with a few of my personal hobbies, reflecting both my creativity and dedication to lifelong learning.</h1>
         </div>
         <section ref={section1Ref}></section>
     </div>
@@ -608,7 +616,6 @@ function PrevIndex() {
                   <br></br>
                   <br></br>
                       <h1 className={styles.pageTitle} > Education </h1>
-                      
                 </div>
                 <div className={styles.educationContainer}>
                   <div className={styles.educationDetails}> 
@@ -638,6 +645,53 @@ function PrevIndex() {
                     <p>Graduated with Honor</p>
                     </div>
                 </div>
+                <br></br>
+                      <br></br>
+                      <br></br>
+                    <br></br>
+                      <br></br>
+                      <br></br>
+               
+    </div>
+    <div>
+      <section ref={section5Ref}></section>
+                <div>
+                  <br></br>
+                  <br></br>
+                      <h1 className={styles.pageTitle} > Contacts </h1>
+                </div>
+                <br></br>
+                <div className={styles.contactsContainer}>
+                  <div className={styles.contacts}>
+                    <p className={styles.contacts}>
+                      <Image
+                          width={10}  
+                   height={10} 
+              className={styles.icon}
+                          src={emailIcon}
+                          alt="icon"
+                        />
+                        <a href="mailto:robertandreib.up@gmail.com">Email: robertandreib.up@gmail.com</a>
+                    
+                    </p>
+                    
+                  </div>
+                   <div className={styles.contacts}>
+                    <p className={styles.contacts}>
+                      <Image
+                          width={10}  
+                           height={10} 
+              className={styles.icon}
+                          src={phoneIcon}
+                          alt="icon"
+                        />
+                        <a href="tel:09938321827">Phone Number: 09938321827</a>
+                    
+                    </p>
+                    
+                  </div>
+                </div>
+                
                 <br></br>
                       <br></br>
                       <br></br>

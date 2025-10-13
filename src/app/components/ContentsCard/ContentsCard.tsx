@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import styles from "./ContentsCard.module.css";
 import Image, { StaticImageData } from "next/image";
+import { useRouter } from "next/navigation";
 
 type ProjectProps = {
   title: string;
@@ -50,6 +51,8 @@ type ProjectProps = {
 export default function ContentsCard({ project }: { project: ProjectProps }) {
   const [activeTab, setActiveTab] = useState("Description");
 
+  const router = useRouter();
+
   const navItems = [
     "Description",
     "Screenshots",
@@ -57,6 +60,10 @@ export default function ContentsCard({ project }: { project: ProjectProps }) {
     "Install Notes",
     "Links",
   ];
+
+  function goBack() {
+    router.push(`/home`);
+  }
 
   // ✅ Combine all non-null descriptions into an array
   const descriptions = [
@@ -181,6 +188,7 @@ export default function ContentsCard({ project }: { project: ProjectProps }) {
           </div>
         )}
       </div>
+      <p className={styles.goBack} onClick={goBack}>Go Back</p>
     </>
   );
 }

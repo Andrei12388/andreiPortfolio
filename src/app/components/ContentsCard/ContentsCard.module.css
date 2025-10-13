@@ -100,3 +100,27 @@
     color: #b5a907;
     text-decoration: underline;
 }
+
+.goBack{
+    border: 1px solid green;
+    border-radius: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: fit-content;
+    margin-top: 5px;
+    margin-left: 10px;
+    font-size: 15px;
+    color: rgb(9, 255, 9);
+    filter: brightness(100%);
+
+    align-self: center;
+   justify-self: center;
+    text-wrap: wrap;
+    transition: all 0.2s ease-in-out;
+}
+.goBack:hover{
+    background-color: green;
+    
+    filter: brightness(100%);
+    color: white;
+}
