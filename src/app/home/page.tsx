@@ -16,6 +16,12 @@ const istritpayter2 = "/images/istritpayter2.PNG";
 const istritpayter3 = "/images/istritpayter3.PNG";
 const istritpayter4 = "/images/istritpayter4.PNG";
 
+const reactProject = "/images/reactProject.PNG";
+const react1 = "/images/react1.PNG";
+const react2 = "/images/react2.PNG";
+const react3 = "/images/react3.PNG";
+const react4 = "/images/react4.PNG";
+
 import andreiPic from "./andreiPic.jpg";
 
 const onepiece = "https://kgmutreakokomnvevvbm.supabase.co/storage/v1/object/public/videos/onepiece.mp4";
@@ -27,6 +33,7 @@ const guitarheroxelectric = "https://kgmutreakokomnvevvbm.supabase.co/storage/v1
 
 const istritpayterVideo = "https://kgmutreakokomnvevvbm.supabase.co/storage/v1/object/public/videos/istritpayterVideo.mp4";
 const psychesletterVideo = "https://kgmutreakokomnvevvbm.supabase.co/storage/v1/object/public/videos/psychesletterVideo.mp4";
+const reactVideo = "https://kgmutreakokomnvevvbm.supabase.co/storage/v1/object/public/videos/reactVideo.mp4";
 
 
 const htmlIcon = "/images/icons/html.png";
@@ -136,10 +143,7 @@ export default function Home(){
     const projectsNum = [
     {projectID: 1, title: "Psyche's Letter", duration: "22 days", active: false, language: "Action Script 2.0", image: psychesImage, image1: psychesImage1, image2: psychesImage2, image3: psychesImage3, image4: psychesImage4, video: psychesletterVideo},
     {projectID: 2,title: "Istrit Payter", duration: "23 days (Still ongoing)", active: false, language: "Html, Css, and Javascript", image: istritpayter, image1: istritpayter1, image2: istritpayter2, image3: istritpayter3, image4: istritpayter4, video: istritpayterVideo},
-    {projectID: 3,title: "Game Website with API", duration: "3 days", active: false, language: "Javascript/Express/Node",image: blankImage, image1: blankImage, image2: blankImage, image3: blankImage, image4: blankImage, video: sincerely},
-    {projectID: 4,title: "Next Js Project", duration: "5 days", active: false, language: "Next JS Framework", image: blankImage, image1: blankImage, image2: blankImage, image3: blankImage, image4: blankImage, video: sincerely},
-    {projectID: 5,title: "Sample Project", duration: "5 days", active: false, language: "None", image: blankImage, image1: blankImage, image2: blankImage, image3: blankImage, image4: blankImage, video: sincerely},
-    {projectID: 6,title: "Sample Project 2", duration: "5 days", active: false, language: "None", image: blankImage, image1: blankImage, image2: blankImage, image3: blankImage, image4: blankImage, video: sincerely},
+    {projectID: 3,title: "React Game Website", duration: "3 days", active: false, language: "React Framework/Javascript",image: reactProject, image1: react1, image2: react2, image3: react3, image4: react4, video: reactVideo},
    ]
 
    function NextIndex() {

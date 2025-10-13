@@ -15,8 +15,16 @@ const istritpayter2 = "/images/istritpayter2.PNG";
 const istritpayter3 = "/images/istritpayter3.PNG";
 const istritpayter4 = "/images/istritpayter4.PNG";
 
+const reactProject = "/images/reactProject.PNG";
+const react1 = "/images/react1.PNG";
+const react2 = "/images/react2.PNG";
+const react3 = "/images/react3.PNG";
+const react4 = "/images/react4.PNG";
+
 const istritpayterVideo = "https://kgmutreakokomnvevvbm.supabase.co/storage/v1/object/public/videos/istritpayterVideo.mp4";
 const psychesletterVideo = "https://kgmutreakokomnvevvbm.supabase.co/storage/v1/object/public/videos/psychesletterVideo.mp4";
+const reactVideo = "https://kgmutreakokomnvevvbm.supabase.co/storage/v1/object/public/videos/reactVideo.mp4";
+
 const blankImage = "/images/blank.jpg";
 
 const projectsNum = [
@@ -103,23 +111,27 @@ const projectsNum = [
   },
   {
     projectID: 3,
-    title: "Game Website with API",
+    title: "React Game Website",
     duration: "3 days",
     active: false,
-    language: "",
-    genre: "",
-    relDate: "",
-    fileSize: "",
-    mirrors: "",
-    video: "",
-    image: blankImage,
-    image1: "",
-    image2: "",
-    image3: "",
-    image4: "",
-    date: "2020",
-    description1: "This is a project called Game Website with API. It is a game website developed using various web technologies. The game was developed in 3 days and was released in 2020. The file size of the game is not specified. The game can be found on various mirrors/links.",
-    description2: "The Game Website with API project is a web-based platform that allows users to access and play various games through an API. The website features a user-friendly interface, allowing players to easily navigate and find their favorite games. The API integration enables seamless communication between the website and the game servers, ensuring a smooth gaming experience for users.",
+    language: "React Framework/Javascript",
+    genre: "Website",
+    relDate: "October 13 2025",
+    fileSize: "56.2 MB",
+    mirrors: "Web Link/Github",
+    sysreq2: "OS: Windows 7/8/10 (64-bit) or Android 5.0+ OS",
+    installnote1: "No installation. Click the website link to view the project.",
+    linknote: "Note: Link 1 - Website, Link 2 - Github Repo",
+    link1: "https://reactgameapp-eight.vercel.app/",
+    link2: "https://github.com/Andrei12388/reactgameapp",
+    video: reactVideo,
+    image: reactProject,
+    image1: react1,
+    image2: react2,
+    image3: react3,
+    image4: react4,
+    date: "2025",
+    description1: "This is a sample of my react website which shows functionalities of a react on useStates, useEffects, fetching data from an API with my own data., etc",
   },
   {
     projectID: 4,
