@@ -662,11 +662,11 @@ function PrevIndex() {
                 </div>
                 <br></br>
                 <div className={styles.contactsContainer}>
-                  <div className={styles.contacts}>
+                  
                     <p className={styles.contacts}>
                       <Image
-                          width={10}  
-                   height={10} 
+                          width={25}  
+                   height={25} 
               className={styles.icon}
                           src={emailIcon}
                           alt="icon"
@@ -675,12 +675,11 @@ function PrevIndex() {
                     
                     </p>
                     
-                  </div>
-                   <div className={styles.contacts}>
+                  
                     <p className={styles.contacts}>
                       <Image
-                          width={10}  
-                           height={10} 
+                          width={25}  
+                           height={25} 
               className={styles.icon}
                           src={phoneIcon}
                           alt="icon"
@@ -688,8 +687,6 @@ function PrevIndex() {
                         <a href="tel:09938321827">Phone Number: 09938321827</a>
                     
                     </p>
-                    
-                  </div>
                 </div>
                 
                 <br></br>
