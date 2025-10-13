@@ -68,7 +68,7 @@ const davinciIcon = "/images/icons/davinci.png";
 const emailIcon = "/images/icons/email.png";
 const phoneIcon = "/images/icons/phone.png";
 
-const pupImage = "/images/PUPlogo.jpg";
+const pupImage = "/images/pupLogo.jpg";
 const amlacImage = "/images/amlacImage.jpg";
 
 
@@ -127,7 +127,7 @@ export default function Home(){
     const sound = hoverSound.current;
     if (sound) {
       sound.currentTime = 0;
-      sound.volume = 0.4;
+      sound.volume = 0.2;
       sound.play();
     }
   };
