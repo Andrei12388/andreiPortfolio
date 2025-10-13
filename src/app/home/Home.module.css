@@ -150,6 +150,49 @@
     color: white;
 }
 
+.skillBar{
+    width: 40em;
+    height: 1em;
+    background-color: red;
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+}
+.skillBar:hover{
+    filter: drop-shadow(0 0 7px white);
+}
+
+.skillMeter1{
+    width: 90%;
+    height: 1em;
+    border-radius: 5px;
+    background-color: yellow;
+}
+.skillMeter2{
+    width: 30%;
+    height: 1em;
+    border-radius: 5px;
+    background-color: yellow;
+}
+.skillMeter3{
+    width: 85%;
+    height: 1em;
+    border-radius: 5px;
+    background-color: yellow;
+}
+
+.percentText{
+    opacity: 0;
+    color: yellow;
+    margin-top: -0.4em;
+    margin-left: 0em;
+    transition: all 0.5s ease-in-out;
+}
+
+.percentText.fadeIn{
+    margin-left: 1em;
+    opacity: 1;
+}
+
 .circleGlow1{
     position: absolute;
     top: 10%;
@@ -197,6 +240,31 @@
     filter: blur(10rem);
     z-index: 1;
 }
+.circleGlow5{
+    border: 3px solid red;
+    position: absolute;
+    bottom: 50%;
+    left: 3%;
+    width: 20rem;
+    height: 10rem;
+    background: var(--pinkcolor);
+    border-radius: 50%;
+    filter: blur(10rem);
+    z-index: 1;
+}
+.circleGlow6{
+    border: 3px solid red;
+    position: absolute;
+    bottom: 35%;
+    right: 3%;
+    width: 20rem;
+    height: 10rem;
+    background: var(--pinkcolor);
+    border-radius: 50%;
+    filter: blur(10rem);
+    z-index: 1;
+}
+
 
 .icon{
     width: 30px;
@@ -225,4 +293,56 @@
 .video.active {
   border: 5px solid #4caf50; /* green border */
   box-shadow: 0 0 15px rgba(76, 175, 80, 0.7);
+}
+
+.educationContainer{
+    width: 60em;
+    display: flex;
+    justify-items: left;
+    align-items: left;
+    justify-content: left;
+    flex-direction: column;
+    gap: 3em;
+}
+
+.schoolImage{
+    border-radius: 100%;
+}
+
+
+.educationDetails {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  transition: all 0.5s ease-in-out;
+}
+
+.educationDetails::after {
+  content: "";
+  position: absolute;
+  bottom: -1em;
+  left: 0;
+  height: 3px;
+  width: 95%;
+  background-color: white;
+  transition: all 0.5s ease-in-out;
+}
+
+.educationDetails:hover::after {
+  width: 100%;
+  background-color: yellow;
+}
+
+
+.educationTitle{
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.educationCourse{
+    text-align: left;
+    font-size: 1em;
+    font-weight: bold;
 }

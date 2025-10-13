@@ -15,8 +15,9 @@ export default function NavBar(){
                 <li><a className={styles.NavBarButton} onClick={() => handleScroll("section1")}>Projects</a></li>
                 <li><a className={styles.NavBarButton} onClick={() => handleScroll("section2")}>Skills</a></li>
                 <li><a className={styles.NavBarButton} onClick={() => handleScroll("section3")}>Hobbies/Talents</a></li>
-                <li><a className={styles.NavBarButton} onClick={() => handleScroll("section4")}>Contact</a></li>
-                <li><a className={styles.NavBarButton} onClick={() => handleScroll("section5")}>Resume</a></li>
+                <li><a className={styles.NavBarButton} onClick={() => handleScroll("section4")}>Education</a></li>
+                <li><a className={styles.NavBarButton} onClick={() => handleScroll("section5")}>Contact</a></li>
+                <li><a className={styles.NavBarButton} onClick={() => handleScroll("section6")}>Resume</a></li>
             </ul>
         </nav>
     )

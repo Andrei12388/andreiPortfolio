@@ -5,6 +5,8 @@ import styles from './Home.module.css';
 
 const blankImage = "/images/blank.jpg";
 
+const coinSound = "/audios/coin.mp3";
+
 const psychesImage = "/images/psychesletter.PNG";
 const psychesImage1 = "/images/psychesletter1.PNG";
 const psychesImage2 = "/images/psychesletter2.PNG";
@@ -46,6 +48,7 @@ const nextjsIcon = "/images/icons/nextjs.png";
 const phpIcon = "/images/icons/php.png";
 const mysqlIcon = "/images/icons/mysql.png";
 const mongodbIcon = "/images/icons/mongodb.png";
+const nodeJSIcon = "/images/icons/nodeJS.png";
 
 const unityIcon = "/images/icons/unity.png";
 const flashIcon = "/images/icons/flash.png";
@@ -61,6 +64,9 @@ const figmaIcon = "/images/icons/figma.png";
 const filmoraIcon = "/images/icons/filmora.png";
 const capcutIcon = "/images/icons/capcut.png";
 const davinciIcon = "/images/icons/davinci.png";
+
+const pupImage = "/images/PUPlogo.PNG";
+const amlacImage = "/images/amlacImage.jpg";
 
 
 import React, { useEffect, useRef, useState } from "react";
@@ -79,6 +85,47 @@ export default function Home(){
   const section1Ref = useRef<HTMLDivElement | null>(null);
   const section2Ref = useRef<HTMLDivElement | null>(null);
   const section3Ref = useRef<HTMLDivElement | null>(null);
+  const section4Ref = useRef<HTMLDivElement | null>(null);
+  const [percentShow1, setpercentShow1] = useState(false);
+  const [percentShow2, setpercentShow2] = useState(false);
+  const [percentShow3, setpercentShow3] = useState(false);
+
+  function percentIn1(){
+    setpercentShow1(true);
+    playSound();
+  }
+
+  function percentOut1(){
+    setpercentShow1(false);
+  }
+  function percentIn2(){
+    setpercentShow2(true);
+    playSound();
+  }
+
+  function percentOut2(){
+    setpercentShow2(false);
+  }
+
+  function percentIn3(){
+    setpercentShow3(true);
+    playSound();
+  }
+
+  function percentOut3(){
+    setpercentShow3(false);
+  }
+
+  const hoverSound = useRef<HTMLAudioElement | null>(null);
+
+  const playSound = () => {
+    const sound = hoverSound.current;
+    if (sound) {
+      sound.currentTime = 0;
+      sound.volume = 0.4;
+      sound.play();
+    }
+  };
 
     // refs for videos
   const videoRefs = useRef<HTMLVideoElement[]>([]);
@@ -130,6 +177,9 @@ export default function Home(){
       if (section === "section3") {
         section3Ref.current?.scrollIntoView({ behavior: "smooth" });
       }
+      if (section === "section4") {
+        section4Ref.current?.scrollIntoView({ behavior: "smooth" });
+      }
     };
 
     window.addEventListener("scrollToSection", handler);
@@ -172,11 +222,11 @@ function PrevIndex() {
                         />
                 </div>
                 <div className={styles.bioText}>
-         <h1 className={styles.pageText}> Hello! I&apos;m <span className={styles.span}>Robert Andrei Bardoquillo</span>, an ICT Education graduate from the Polytechnic University of the Philippines – Quezon City Branch. I have a strong passion for games, animations, and software development, and I am continuously developing my programming skills. 
+         <h1 className={styles.pageText}>Hi! I&apos;m <span className={styles.span}>Robert Andrei Bardoquillo</span> from Quezon City Philippines, an ICT Education graduate from the Polytechnic University of the Philippines. I have a strong passion for games, animations, and software development, and I am continuously developing my programming skills. 
           </h1>
         </div>
         <div className={styles.bioText}>
-         <h1 className={styles.pageText}>Although I did not pursue a formal IT degree, I have been self-taught in coding, driven by my long-time dream of becoming a programmer. This website showcases my projects along with a few of my personal hobbies, reflecting both my creativity and dedication to lifelong learning.</h1>
+         <h1 className={styles.pageText}>Although I did not pursue a formal IT degree, I have been self-taught in coding since <span className={styles.span}>2023</span>, driven by my long-time dream of becoming a programmer. This website showcases my projects along with a few of my personal hobbies, reflecting both my creativity and dedication to lifelong learning.</h1>
         </div>
         <section ref={section1Ref}></section>
     </div>
@@ -309,6 +359,16 @@ function PrevIndex() {
                           alt="icon"
                         />
            MongoDb
+         </div>
+         <div className={styles.skills}>
+            <Image
+                 width={100}  
+  height={100} 
+              className={styles.icon}
+                          src={nodeJSIcon}
+                          alt="icon"
+                        />
+           NodeJs
          </div>
                   </div>
                    App and Game Development
@@ -454,9 +514,54 @@ function PrevIndex() {
          </div>
          
          </div>
-                  
-         
+        
+         <div><h1 className={styles.pageTitle}>Skills Proficieny</h1>
+            <audio ref={hoverSound} src={coinSound} preload="auto"></audio>
+         <div>
+          <p>Frontend/Design</p>
+          <div className="flex flex-column">
+          <div className={styles.skillBar}
+          onMouseEnter={percentIn1}
+             onMouseLeave={percentOut1}
+          >
+            <div className={styles.skillMeter1}
+             > </div> 
+          </div>
+          <span className={`${styles.percentText} ${percentShow1 ? styles.fadeIn : styles.fadeOut}`}>90%</span>
+          </div>
+          </div>
+
+          <div>
+          <p>Backend</p>
+          <div className="flex flex-column">
+          <div className={styles.skillBar}
+           onMouseEnter={percentIn2}
+             onMouseLeave={percentOut2}
+          >
+            <div className={styles.skillMeter2} 
+            > </div> 
+          </div>
+          <span className={`${styles.percentText} ${percentShow2 ? styles.fadeIn : styles.fadeOut}`}>30%</span>
+          </div>
+          </div>
+
+          <div>
+          <p>Game Development</p>
+          <div className="flex flex-column">
+          <div className={styles.skillBar}
+          onMouseEnter={percentIn3}
+             onMouseLeave={percentOut3}
+          >
+            <div className={styles.skillMeter3}
+            > </div> 
+          </div>
+          <span className={`${styles.percentText} ${percentShow3 ? styles.fadeIn : styles.fadeOut}`}>85%</span>
+          </div>
+          </div>
+
+          </div>
         </div>
+        
     </div>
     <div>
       <section ref={section3Ref}></section>
@@ -497,10 +602,56 @@ function PrevIndex() {
                       <br></br>
                
     </div>
+    <div>
+      <section ref={section4Ref}></section>
+                <div>
+                  <br></br>
+                  <br></br>
+                      <h1 className={styles.pageTitle} > Education </h1>
+                      
+                </div>
+                <div className={styles.educationContainer}>
+                  <div className={styles.educationDetails}> 
+                    <Image
+                width={100}  
+                 height={100} 
+              className={styles.schoolImage}
+                          src={pupImage}
+                          alt="school"
+                        />
+                    <h1 className={styles.educationTitle}>Polytechnic University of the Philippines (Quezon City Branch)</h1>
+                    <h1 className={styles.educationCourse}>Bachelor of Business Technology and Livelihood Education major in Information Communication and Technology (BTLEDICT)</h1>
+                    <p>2020 - 2024</p>
+                    <p>Graduated with Latin Honor (Cum Laude)</p>
+                    </div>
+                  <div className={styles.educationDetails}> 
+                    <Image
+                width={100}  
+                 height={100} 
+              className={styles.schoolImage}
+                          src={amlacImage}
+                          alt="school"
+                        />
+                    <h1 className={styles.educationTitle}>Justice Cecilia Munoz Palma Senior High School</h1>
+                    <h1 className={styles.educationCourse}>Information and Communication Technology - Animation</h1>
+                    <p>2018 - 2020</p>
+                    <p>Graduated with Honor</p>
+                    </div>
+                </div>
+                <br></br>
+                      <br></br>
+                      <br></br>
+                    <br></br>
+                      <br></br>
+                      <br></br>
+               
+    </div>
     <div className={styles.circleGlow1}></div>
     <div className={styles.circleGlow2}></div>
     <div className={styles.circleGlow3}></div>
     <div className={styles.circleGlow4}></div>
+    <div className={styles.circleGlow5}></div>
+    <div className={styles.circleGlow6}></div>
    
     </div>
     );
