@@ -71,6 +71,10 @@ const phoneIcon = "/images/icons/phone.png";
 const pupImage = "/images/pupLogo.jpg";
 const amlacImage = "/images/amlacImage.jpg";
 
+const locationIcon = "/images/icons/location.png";
+const experienceIcon = "/images/icons/experience.png";
+const languageIcon = "/images/icons/language.png";
+
 
 import React, { useEffect, useRef, useState } from "react";
 import Image, { StaticImageData } from "next/image";
@@ -658,11 +662,13 @@ function PrevIndex() {
                 <div>
                   <br></br>
                   <br></br>
-                      <h1 className={styles.pageTitle} > Contacts </h1>
+                      
                 </div>
                 <br></br>
-                <div className={styles.contactsContainer}>
+                <div className={styles.contactPage}>
                   
+                <div className={styles.contactsContainer}>
+                  <h1 className={styles.pageTitle} > Contacts </h1>
                     <p className={styles.contacts}>
                       <Image
                           width={25}  
@@ -688,6 +694,55 @@ function PrevIndex() {
                     
                     </p>
                 </div>
+
+                <div className={styles.selfInfoContainer}>
+
+                  <div className={styles.contactCard}>
+                    <p className={styles.contactsText}>
+                      <Image
+                          width={25}  
+                   height={25} 
+              className={styles.icon}
+                          src={languageIcon}
+                          alt="icon"
+                        />
+                        <p className={styles.pTitle}>Language</p>
+                        <p>English, Filipino</p>
+                    
+                    </p>
+                    </div>
+                    
+                  <div className={styles.contactCard}>
+                    <p className={styles.contactsText}>
+                      <Image
+                          width={25}  
+                           height={25} 
+              className={styles.icon}
+                          src={locationIcon}
+                          alt="icon"
+                        />
+                        <p className={styles.pTitle}>From</p>
+                        <p>Quezon City, Philippins</p>
+                    
+                    </p>
+                    </div>
+
+                    <div className={styles.contactCard}>
+                    <p className={styles.contactsText}>
+                      <Image
+                          width={25}  
+                           height={25} 
+              className={styles.icon}
+                          src={experienceIcon}
+                          alt="icon"
+                        />
+                        <p className={styles.pTitle}>Experience</p>
+                        <p>KnK Philippines (Admin Staff 6 Months)</p>
+                    
+                    </p>
+                    </div>
+                </div>
+                </div>
                 
                 <br></br>
                       <br></br>
@@ -703,6 +758,7 @@ function PrevIndex() {
     <div className={styles.circleGlow4}></div>
     <div className={styles.circleGlow5}></div>
     <div className={styles.circleGlow6}></div>
+    <div className={styles.circleGlow7}></div>
    
     </div>
     );
