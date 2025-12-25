@@ -74,7 +74,7 @@ const projectsNum = [
   {
     projectID: 2,
     title: "Istrit Payter",
-    duration: "23 days",
+    duration: "45 days",
     active: false,
     language: "Html, Css, and Javascript",
     image: istritpayter,
@@ -88,14 +88,15 @@ const projectsNum = [
     image2: istritpayter2,
     image3: istritpayter3,
     image4: istritpayter4,
-    installnote1: "The game is currently in development and will be available soon on itch.io and GitHub.",
+    installnote1: "The game is currently in development. Playtest is now available on itch.io",
     sysreq1: "Platforms: Mobile (Apk) and PC (Web Browser)", 
     sysreq2: "OS: Windows 7/8/10 (64-bit) or Android 5.0+ OS",
     sysreq3: "Memory: 1 GB RAM",
     sysreq4: "Storage: 100 MB available space",
 
-    link1: "https://github.com/Andrei12388/istritpayter",
-    linknote: "Note: Link 1 - Github (Source Code)",
+    link1: "https://andrei12388.itch.io/istrit-payter-2025",
+    link2: "https://github.com/Andrei12388/istritpayter",
+    linknote: "Note: Link 1 - Itch io (Game Link), Link 2 - Github (Source Code)",
 
     description1: "Meme to Game.",
     description2: "Istrit Payter (2025) — Web/Mobile Game Project",
