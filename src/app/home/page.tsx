@@ -53,6 +53,7 @@ const nodeJSIcon = "/images/icons/nodeJS.png";
 const unityIcon = "/images/icons/unity.png";
 const flashIcon = "/images/icons/flash.png";
 const pythonIcon = "/images/icons/python.png";
+const cppIcon = "/images/icons/cpp.png";
 const androidIcon = "/images/icons/androidstudio.png";
 
 const photoshopIcon = "/images/icons/photoshop.png";
@@ -204,7 +205,7 @@ export default function Home(){
 
     const projectsNum = [
     {projectID: 1, title: "Psyche's Letter", duration: "22 days", active: false, language: "Action Script 2.0", image: psychesImage, image1: psychesImage1, image2: psychesImage2, image3: psychesImage3, image4: psychesImage4, video: psychesletterVideo},
-    {projectID: 2,title: "Istrit Payter", duration: "45 days (Still ongoing)", active: false, language: "Html, Css, and Javascript", image: istritpayter, image1: istritpayter1, image2: istritpayter2, image3: istritpayter3, image4: istritpayter4, video: istritpayterVideo},
+    {projectID: 2,title: "Istrit Payter 2025", duration: "49 days (Still ongoing)", active: false, language: "Html, Css, and Javascript", image: istritpayter, image1: istritpayter1, image2: istritpayter2, image3: istritpayter3, image4: istritpayter4, video: istritpayterVideo},
     {projectID: 3,title: "React Game Website", duration: "3 days", active: false, language: "React Framework/Javascript",image: reactProject, image1: react1, image2: react2, image3: react3, image4: react4, video: reactVideo},
    ]
 
@@ -436,6 +437,16 @@ function PrevIndex() {
                         />
            Android Studio
          </div>
+          <div className={styles.skills}>
+          <Image
+             width={100}  
+  height={100} 
+              className={styles.icon}
+                          src={cppIcon}
+                          alt="icon"
+                        />
+           C++
+         </div>
                   </div>
                   Design and Styling
                   <div className={styles.skillsContainerCategory}>
@@ -470,16 +481,7 @@ function PrevIndex() {
                         />
            Graphics Gale
          </div>
-         <div className={styles.skills}>
-          <Image
-               width={100}  
-  height={100} 
-              className={styles.icon}
-                          src={tailwindIcon}
-                          alt="icon"
-                        />
-           Tailwind
-         </div>
+         
          <div className={styles.skills}>
           <Image
               width={100}  

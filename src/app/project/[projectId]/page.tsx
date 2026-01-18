@@ -73,8 +73,8 @@ const projectsNum = [
   },
   {
     projectID: 2,
-    title: "Istrit Payter",
-    duration: "45 days",
+    title: "Istrit Payter 2025",
+    duration: "49 days",
     active: false,
     language: "Html, Css, and Javascript",
     image: istritpayter,
