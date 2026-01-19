@@ -4,7 +4,7 @@ import { FormEvent, useState } from "react"
 import styles from "./ContactForm.module.css"
 import ReactConfetti from "react-confetti"
 import { useWindowSize } from 'react-use'
-import Router from "next/router"
+import { useRouter } from "next/navigation";
 
 
 export const ContactForm = () => {
@@ -16,6 +16,8 @@ export const ContactForm = () => {
     const [message, setMessage] = useState('')
     const [isSubmitting, setSubmitting] = useState(false)
     const { width, height } = useWindowSize()
+
+     const router = useRouter();
 
     const onSubmit = async (e: FormEvent) => {
         e.preventDefault()
@@ -38,7 +40,7 @@ export const ContactForm = () => {
                 setName('')
                 setEmail('')
                 setMessage('')
-                Router.push('/home')
+                
             } else {
                 const data = await res.json()
                 setErrMsg(data.error || 'Failed to send message!')
