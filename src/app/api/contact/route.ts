@@ -4,7 +4,10 @@ import Mailgun from 'mailgun.js'
 
 export const runtime = 'nodejs'
 
+
+
 export async function POST(req: Request) {
+  console.log('📩 Contact API hit')
   try {
     // 1️⃣ Read data from frontend
     const { name, email, message } = await req.json()
