@@ -1,4 +1,5 @@
 'use client'
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { FormEvent, useState } from "react"
 import styles from "./ContactForm.module.css"
 import ReactConfetti from "react-confetti"
@@ -41,18 +42,12 @@ export const ContactForm = () => {
                 setErrMsg(data.error || 'Failed to send message!')
                 setErrorEnable(true)
             }
-        } catch (error: unknown) {
-  console.error('error', error)
-
-  setErrorEnable(true)
-
-  if (error instanceof Error) {
-    setErrMsg(error.message)
-  } else {
-    setErrMsg('Something went wrong. Please try again.')
-  }
-}
-
+            
+        } catch(error:any){
+            console.error('error', error)
+            setErrorEnable(true)
+            setErrMsg(error)
+        }
          finally {
             setSubmitting(false)
         }
