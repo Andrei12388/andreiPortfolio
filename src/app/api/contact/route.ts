@@ -49,12 +49,17 @@ ${message}
       { status: 200 }
     )
 
-  } catch (error: any) {
+  } catch (error: unknown) {
+  if (error instanceof Error) {
+    console.error('Mailgun error:', error.message)
+  } else {
     console.error('Mailgun error:', error)
-
-    return NextResponse.json(
-      { error: 'Failed to send message' },
-      { status: 500 }
-    )
   }
+
+  return NextResponse.json(
+    { error: 'Failed to send message' },
+    { status: 500 }
+  )
+}
+
 }
