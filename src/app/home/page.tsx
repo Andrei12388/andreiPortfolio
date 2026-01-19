@@ -175,7 +175,7 @@ useEffect(() => {
     y: Math.random() * Math.PI * 2,
   }));
 
-  let start = performance.now();
+  const start = performance.now();
 
   const animate = (time: number) => {
     const t = (time - start) / 1000;
