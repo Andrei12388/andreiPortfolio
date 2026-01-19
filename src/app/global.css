@@ -41,6 +41,7 @@ body {
     background-color: var(--foreground-bg);
     color: var(--foreground-rgb);
     cursor: none; 
+    overflow-x: hidden;
 }
 
 .childrenContainer{

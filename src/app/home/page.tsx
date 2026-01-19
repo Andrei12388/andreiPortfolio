@@ -68,6 +68,7 @@ const davinciIcon = "/images/icons/davinci.png";
 
 const emailIcon = "/images/icons/email.png";
 const phoneIcon = "/images/icons/phone.png";
+const documentIcon = "/images/icons/document.png";
 
 const pupImage = "/images/pupLogo.jpg";
 const amlacImage = "/images/amlacImage.jpg";
@@ -224,6 +225,9 @@ useEffect(() => {
         section4Ref.current?.scrollIntoView({ behavior: "smooth" });
       }
       if (section === "section5") {
+        section5Ref.current?.scrollIntoView({ behavior: "smooth" });
+      }
+      if (section === "section6") {
         section5Ref.current?.scrollIntoView({ behavior: "smooth" });
       }
     };
@@ -726,8 +730,19 @@ function PrevIndex() {
                           alt="icon"
                         />
                         <a href="tel:09938321827">Phone Number: 09938321827</a>
-                    
                     </p>
+
+                     <p className={styles.contacts}>
+                      <Image
+                          width={25}  
+                           height={25} 
+              className={styles.icon}
+                          src={documentIcon}
+                          alt="icon"
+                        />
+                        <a href="/files/Andrei_Bardoquillo_CV.pdf">Resume/CV: Click to Download</a>
+                    </p>
+                    
                 </div>
 
                 <div className={styles.selfInfoContainer}>
