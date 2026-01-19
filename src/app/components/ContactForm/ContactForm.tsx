@@ -41,11 +41,18 @@ export const ContactForm = () => {
                 setErrMsg(data.error || 'Failed to send message!')
                 setErrorEnable(true)
             }
-        } catch(error:any){
-            console.error('error', error)
-            setErrorEnable(true)
-            setErrMsg(error)
-        }
+        } catch (error: unknown) {
+  console.error('error', error)
+
+  setErrorEnable(true)
+
+  if (error instanceof Error) {
+    setErrMsg(error.message)
+  } else {
+    setErrMsg('Something went wrong. Please try again.')
+  }
+}
+
          finally {
             setSubmitting(false)
         }
