@@ -80,6 +80,7 @@ const languageIcon = "/images/icons/language.png";
 
 import React, { useEffect, useRef, useState } from "react";
 import Image, { StaticImageData } from "next/image";
+import { ContactForm } from "../components/ContactForm/ContactForm";
 
 /*export const metadata: Metadata = {
     title: "Home",
@@ -793,15 +794,22 @@ function PrevIndex() {
                     </div>
                 </div>
                 </div>
-                
-                <br></br>
+               
+               
+                    <br></br>
+                      <br></br>
+                      <br></br>
+                <div className={styles.contactPage}>
+                  <ContactForm />
+                </div>
+                 <br></br>
                       <br></br>
                       <br></br>
                     <br></br>
                       <br></br>
                       <br></br>
-               
     </div>
+    
     <div className={`${styles.circleGlow} ${styles.circleGlow1}`}></div>
 <div className={`${styles.circleGlow} ${styles.circleGlow2}`}></div>
 <div className={`${styles.circleGlow} ${styles.circleGlow3}`}></div>

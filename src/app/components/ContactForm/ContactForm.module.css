@@ -1,0 +1,113 @@
+.body{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    
+    width: 50em;
+
+    padding: 2em;
+    display: flex;
+    flex-direction: row;
+    border-radius: 1em;
+    text-align: start;
+    gap: 1em;
+    background-color: black;
+    filter: drop-shadow(0 0 8px var(--pinkcolor));
+    transition: all 0.3s ease-in-out;
+}
+.body:hover{
+    scale: 1.1;
+    filter: drop-shadow(0 0 8px yellow);
+}
+.confetti{
+    position: absolute;
+    width: 100%;
+}
+
+.leftBody{
+    display: flex;
+    justify-self: center;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+   
+}
+.input{
+    padding: 1em;
+    display: flex;
+    flex-direction: row;
+    width: 25em;
+    text-align: start;
+    gap: 1em;
+    background-color: black;
+    filter: drop-shadow(0 0 8px var(--pinkcolor));
+    transition: all 0.3s ease-in-out;
+}
+.textarea{
+    padding: 1em;
+    display: flex;
+    flex-direction: row;
+    width: 25em;
+    text-align: start;
+    gap: 1em;
+    background-color: black;
+    filter: drop-shadow(0 0 8px var(--pinkcolor));
+    transition: all 0.3s ease-in-out;
+}
+
+.contactText{
+    font-size: 1.5em;
+    color: rgb(255, 255, 255);
+}
+
+.button{
+    display: flex;
+    justify-content: end;
+}
+
+.buttonSend{
+    width: 10em;
+    height: 2.5em;
+    margin-top: 2em;
+    color: white;
+    border-radius: 5em;
+    background-color: rgb(52, 10, 190);
+    justify-self: end;
+    scale: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+.buttonSent{
+    width: 10em;
+    height: 2.5em;
+    margin-top: 2em;
+    color: white;
+    border-radius: 5em;
+    background-color: rgb(138, 128, 171);
+    justify-self: end;
+    scale: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+.buttonSend:hover{
+    scale: 1.1;
+    background-color: yellow;
+    color: black;
+}
+
+.errorMsg{
+    margin-top: 2em;
+    margin-right: 3em;
+    justify-content: center;
+    align-content: center;
+    color: red;
+}
+.sentMsg{
+    margin-top: 2em;
+    margin-right: 3em;
+    justify-content: center;
+    align-content: center;
+    color: rgb(69, 243, 69);
+    
+}
+

@@ -9,10 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "mailgun.js": "^12.6.1",
     "next": "15.4.10",
     "nprogress": "^0.2.0",
     "react": "19.1.0",
-    "react-dom": "19.1.0"
+    "react-confetti": "^6.4.0",
+    "react-dom": "19.1.0",
+    "react-use": "^17.6.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
