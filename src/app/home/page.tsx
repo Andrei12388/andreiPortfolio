@@ -165,6 +165,39 @@ export default function Home(){
   }
 };
 
+//for floating animation
+useEffect(() => {
+  const glows = document.querySelectorAll(`.${styles.circleGlow}`);
+
+  // random seeds per glow
+  const seeds = Array.from({ length: glows.length }, () => ({
+    x: Math.random() * Math.PI * 2,
+    y: Math.random() * Math.PI * 2,
+  }));
+
+  let start = performance.now();
+
+  const animate = (time: number) => {
+    const t = (time - start) / 1000;
+
+    glows.forEach((el, index) => {
+      const offsetY =
+        Math.sin(t * 1.2 + seeds[index].y) * 500;
+
+      const offsetX =
+        Math.sin(t * 0.8 + seeds[index].x) * 700;
+
+      (el as HTMLElement).style.transform =
+        `translate(${offsetX}px, ${offsetY}px)`;
+    });
+
+    requestAnimationFrame(animate);
+  };
+
+  requestAnimationFrame(animate);
+}, []);
+
+
 
   useEffect(() => {
     const handler = (e: Event) => {
@@ -754,13 +787,15 @@ function PrevIndex() {
                       <br></br>
                
     </div>
-    <div className={styles.circleGlow1}></div>
-    <div className={styles.circleGlow2}></div>
-    <div className={styles.circleGlow3}></div>
-    <div className={styles.circleGlow4}></div>
-    <div className={styles.circleGlow5}></div>
-    <div className={styles.circleGlow6}></div>
-    <div className={styles.circleGlow7}></div>
+    <div className={`${styles.circleGlow} ${styles.circleGlow1}`}></div>
+<div className={`${styles.circleGlow} ${styles.circleGlow2}`}></div>
+<div className={`${styles.circleGlow} ${styles.circleGlow3}`}></div>
+<div className={`${styles.circleGlow} ${styles.circleGlow4}`}></div>
+<div className={`${styles.circleGlow} ${styles.circleGlow5}`}></div>
+<div className={`${styles.circleGlow} ${styles.circleGlow6}`}></div>
+<div className={`${styles.circleGlow} ${styles.circleGlow7}`}></div>
+<div className={`${styles.circleGlow} ${styles.circleGlow8}`}></div>
+
    
     </div>
     );

@@ -193,6 +193,12 @@
     opacity: 1;
 }
 
+.circleGlow {
+  position: absolute;
+  will-change: transform;
+}
+
+
 .circleGlow1{
     position: absolute;
     top: 10%;
@@ -203,6 +209,7 @@
     border-radius: 50%;
     filter: blur(10rem);
     z-index: 1;
+    will-change: transform;
 }
 
 .circleGlow2{
@@ -215,6 +222,7 @@
     border-radius: 50%;
     filter: blur(10rem);
     z-index: 1;
+    will-change: transform;
 }
 
 .circleGlow3{
@@ -227,6 +235,7 @@
     border-radius: 50%;
     filter: blur(14rem);
     z-index: 1;
+    will-change: transform;
 }
 
 .circleGlow4{
@@ -239,6 +248,7 @@
     border-radius: 50%;
     filter: blur(10rem);
     z-index: 1;
+    will-change: transform;
 }
 .circleGlow5{
     
@@ -251,6 +261,7 @@
     border-radius: 50%;
     filter: blur(10rem);
     z-index: 1;
+    will-change: transform;
 }
 .circleGlow6{
     
@@ -263,6 +274,7 @@
     border-radius: 50%;
     filter: blur(10rem);
     z-index: 1;
+    will-change: transform;
 }
 
 .circleGlow7{
@@ -276,6 +288,20 @@
     border-radius: 50%;
     filter: blur(10rem);
     z-index: 1;
+    will-change: transform;
+}
+
+.circleGlow8{
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    width: 8rem;
+    height: 20rem;
+    background: var(--pinkcolor);
+    border-radius: 50%;
+    filter: blur(10rem);
+    z-index: 1;
+    will-change: transform;
 }
 
 
