@@ -92,6 +92,13 @@
     cursor: pointer;
 }
 
+.hoverPointer{
+    cursor: pointer;
+}
+.hoverPointer:hover{
+    cursor: pointer;
+}
+
 .span{
     
     transition: all 0.2s ease-in-out;
