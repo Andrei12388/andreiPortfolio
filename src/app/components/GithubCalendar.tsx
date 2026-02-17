@@ -41,7 +41,7 @@ export default function GithubContributions() {
   if (loading) return <p>Loading Github contributions...</p>;
 
   return (
-    <div className="p-4 max-w-full overflow-x-auto transition-transform duration-300 ease-out hover:scale-120">
+    <div className="p-4 max-w-full overflow-x-auto transition-transform duration-300 ease-out hover:scale-110">
       <h2 className="text-2xl font-bold mb-4">GitHub Contributions: Andrei12388</h2>
       <p className="mb-2 font-medium">Total contributions: {calendar.totalContributions}</p>
 
