@@ -22,8 +22,10 @@ export default function GithubContributions() {
     totalContributions: 0,
     weeks: [],
   });
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    setLoading(true);
     fetch("/api/github-contributions")
       .then(res => res.json())
       .then(data => {
@@ -32,11 +34,14 @@ export default function GithubContributions() {
           totalContributions: calendarData.totalContributions,
           weeks: calendarData.weeks,
         });
+        setLoading(false)
       });
   }, []);
 
+  if (loading) return <p>Loading Github contributions...</p>;
+
   return (
-    <div className="p-4 max-w-full overflow-x-auto">
+    <div className="p-4 max-w-full overflow-x-auto hover:scale-110">
       <h2 className="text-2xl font-bold mb-4">GitHub Contributions: Andrei12388</h2>
       <p className="mb-2 font-medium">Total contributions: {calendar.totalContributions}</p>
 

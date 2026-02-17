@@ -85,6 +85,7 @@ import React, { useEffect, useRef, useState } from "react";
 import Image, { StaticImageData } from "next/image";
 import { ContactForm } from "../components/ContactForm/ContactForm";
 import GithubContributions from "../components/GithubCalendar";
+import ItchAnalytics from "../components/ItchAnalytics";
 
 /*export const metadata: Metadata = {
     title: "Home",
@@ -314,8 +315,18 @@ function PrevIndex() {
 
    
     <div>
-        <div >
-     <GithubContributions />
+        <div className="flex flex-col justify-center items-center">
+     <a href="https://github.com/Andrei12388"
+    target="_blank"
+  rel="noopener noreferrer"
+    >
+     <GithubContributions /></a>
+      <a href="https://andrei12388.itch.io/istrit-payter-2025"
+    target="_blank"
+  rel="noopener noreferrer"
+    >
+     <ItchAnalytics />
+     </a>
     </div>
       <section  ref={section2Ref}></section>
       <div className=" flex flex-col items-center align-middle justify-center ">
