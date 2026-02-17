@@ -3,8 +3,6 @@
 import HomeCard from "../components/HomeCard/HomeCard";
 import styles from './Home.module.css';
 
-const blankImage = "/images/blank.jpg";
-
 const coinSound = "/audios/coin.mp3";
 
 const psychesImage = "/images/psychesletter.PNG";
@@ -49,12 +47,17 @@ const phpIcon = "/images/icons/php.png";
 const mysqlIcon = "/images/icons/mysql.png";
 const mongodbIcon = "/images/icons/mongodb.png";
 const nodeJSIcon = "/images/icons/nodeJS.png";
+const firebaseIcon = "/images/icons/firebase.png";
+const supabaseIcon = "/images/icons/supabase.png";
+const appwriteIcon = "/images/icons/appwrite.png";
 
 const unityIcon = "/images/icons/unity.png";
 const flashIcon = "/images/icons/flash.png";
 const pythonIcon = "/images/icons/python.png";
 const cppIcon = "/images/icons/cpp.png";
 const androidIcon = "/images/icons/androidstudio.png";
+const cordovaIcon = "/images/icons/cordova.png";
+const capacitorIcon = "/images/icons/capacitor.png";
 
 const photoshopIcon = "/images/icons/photoshop.png";
 const canvaIcon = "/images/icons/canva.png";
@@ -81,6 +84,7 @@ const languageIcon = "/images/icons/language.png";
 import React, { useEffect, useRef, useState } from "react";
 import Image, { StaticImageData } from "next/image";
 import { ContactForm } from "../components/ContactForm/ContactForm";
+import GithubContributions from "../components/GithubCalendar";
 
 /*export const metadata: Metadata = {
     title: "Home",
@@ -303,15 +307,24 @@ function PrevIndex() {
 >
   →
 </button>
-        </div>
 
+        </div>
+  
     </div>
-    <div >
-      <section ref={section2Ref}></section>
+
+   
+    <div>
+        <div >
+     <GithubContributions />
+    </div>
+      <section  ref={section2Ref}></section>
+      <div className=" flex flex-col items-center align-middle justify-center ">
                 <div>
+                   
                      <br></br>
                      <br></br>
                 </div>
+                
                 <h1 className={styles.pageTitle} > Skills </h1>
                 <div className={styles.skillsContainer}>
                   Front End
@@ -368,6 +381,16 @@ function PrevIndex() {
            React
          </div>
          <div className={styles.skills}>
+            <Image
+                 width={100}  
+  height={100} 
+              className={styles.icon}
+                          src={reactIcon}
+                          alt="icon"
+                        />
+           React Native
+         </div>
+         <div className={styles.skills}>
           <Image
               width={100}  
   height={100} 
@@ -376,6 +399,16 @@ function PrevIndex() {
                           alt="icon"
                         />
            NextJs
+         </div>
+         <div className={styles.skills}>
+          <Image
+              width={100}  
+  height={100} 
+              className={styles.icon}
+                          src={tailwindIcon}
+                          alt="icon"
+                        />
+           Tailwind Css
          </div>
                   </div>
                   Back End
@@ -420,6 +453,36 @@ function PrevIndex() {
                           alt="icon"
                         />
            NodeJs
+         </div>
+          <div className={styles.skills}>
+            <Image
+                 width={100}  
+  height={100} 
+              className={styles.icon}
+                          src={firebaseIcon}
+                          alt="icon"
+                        />
+           Firebase
+         </div>
+          <div className={styles.skills}>
+            <Image
+                 width={100}  
+  height={100} 
+              className={styles.icon}
+                          src={appwriteIcon}
+                          alt="icon"
+                        />
+           Appwrite
+         </div>
+          <div className={styles.skills}>
+            <Image
+                 width={100}  
+  height={100} 
+              className={styles.icon}
+                          src={supabaseIcon}
+                          alt="icon"
+                        />
+           Supabase
          </div>
                   </div>
                    App and Game Development
@@ -484,6 +547,36 @@ function PrevIndex() {
                           alt="icon"
                         />
            C++
+         </div>
+         <div className={styles.skills}>
+          <Image
+             width={100}  
+  height={100} 
+              className={styles.icon}
+                          src={capacitorIcon}
+                          alt="icon"
+                        />
+           Capacitor
+         </div>
+         <div className={styles.skills}>
+          <Image
+             width={100}  
+  height={100} 
+              className={styles.icon}
+                          src={cordovaIcon}
+                          alt="icon"
+                        />
+           Cordova
+         </div>
+         <div className={styles.skills}>
+          <Image
+             width={100}  
+  height={100} 
+              className={styles.icon}
+                          src={reactIcon}
+                          alt="icon"
+                        />
+           React
          </div>
                   </div>
                   Design and Styling
@@ -593,7 +686,7 @@ function PrevIndex() {
             <div className={styles.skillMeter2} 
             > </div> 
           </div>
-          <span className={`${styles.percentText} ${percentShow2 ? styles.fadeIn : styles.fadeOut}`}>30%</span>
+          <span className={`${styles.percentText} ${percentShow2 ? styles.fadeIn : styles.fadeOut}`}>45%</span>
           </div>
           </div>
 
@@ -615,13 +708,14 @@ function PrevIndex() {
         </div>
         
     </div>
+    </div>
     <div>
       <section ref={section3Ref}></section>
                 <div>
                   <br></br>
                   <br></br>
                       <h1 className={styles.pageTitle} > Hobbies/Talents </h1>
-                      
+                     
                 </div>
                 <div className={styles.videoContainer}>
         {[lagibini, onepiece,

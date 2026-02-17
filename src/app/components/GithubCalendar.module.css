@@ -1,0 +1,55 @@
+/* GitHub Calendar Base Styles */
+.calendar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 2px;
+  font-family: system-ui, sans-serif;
+  user-select: none;
+}
+
+/* Each day square */
+.calendar .day {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  background-color: #ebedf0; /* empty day */
+  transition: background-color 0.3s;
+}
+
+/* Contribution levels */
+.calendar .day[data-level="1"] { background-color: #9be9a8; }
+.calendar .day[data-level="2"] { background-color: #40c463; }
+.calendar .day[data-level="3"] { background-color: #30a14e; }
+.calendar .day[data-level="4"] { background-color: #216e39; }
+
+/* Hover tooltip */
+.calendar .day:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  background: #24292f;
+  color: #fff;
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 4px;
+  white-space: nowrap;
+  transform: translateY(-150%);
+  z-index: 50;
+  pointer-events: none;
+}
+
+/* Weekday labels */
+.calendar .month-label {
+  width: 100%;
+  font-size: 12px;
+  margin-bottom: 4px;
+  color: #57606a;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .calendar .day {
+    width: 8px;
+    height: 8px;
+  }
+}
