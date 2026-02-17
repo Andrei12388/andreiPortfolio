@@ -1,5 +1,19 @@
 import { NextResponse } from "next/server";
 
+interface ItchGame {
+  id: number;
+  title: string;
+  url: string;
+  views_count?: number;
+  downloads_count?: number;
+  purchases_count?: number;
+}
+
+interface ItchResponse {
+  games: ItchGame[];
+}
+
+
 export async function GET() {
   const apiKey = process.env.ITCH_API_KEY;
   const gameId = Number(process.env.ITCH_GAME_ID);
@@ -18,9 +32,9 @@ export async function GET() {
       { cache: "no-store" }
     );
 
-    const data = await res.json();
+    const data: ItchResponse = await res.json();
 
-    const game = data.games.find((g: any) => g.id === gameId);
+   const game = data.games.find((g) => g.id === gameId);
 
     if (!game) {
       return NextResponse.json(

@@ -25,7 +25,9 @@ export default function ItchAnalytics() {
 
   return (
    
-    <div className="p-4  rounded-lg shadow-md max-w-md hover:scale-120">
+    <div className="p-4  rounded-lg shadow-md max-w-md 
+  transition-transform duration-300 ease-out
+  hover:scale-120">
       <h2 className="text-2xl font-bold mb-4">Itch.io Analytics</h2>
 
       <div className="grid grid-cols-3 gap-4 text-center">
