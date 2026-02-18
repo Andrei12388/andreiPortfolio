@@ -55,11 +55,19 @@ export async function POST(req: NextRequest) {
       message: `Collection "${tableName}" with default columns created successfully`,
       collection,
     });
-  } catch (error: any) {
-    console.error(error);
-    return NextResponse.json(
-      { success: false, message: error.message || "Failed to create collection" },
-      { status: 500 }
-    );
+  } catch (error: unknown) {
+  console.error(error);
+
+  let message = "Failed to create collection";
+
+  if (error instanceof Error) {
+    message = error.message;
   }
+
+  return NextResponse.json(
+    { success: false, message },
+    { status: 500 }
+  );
+}
+
 }
