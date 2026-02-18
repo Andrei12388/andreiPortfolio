@@ -21,9 +21,16 @@ const react2 = "/images/react2.PNG";
 const react3 = "/images/react3.PNG";
 const react4 = "/images/react4.PNG";
 
+const capacitorProject = "/images/capacitorProject.PNG"
+const capacitor1 = "/images/capacitor1.PNG"
+const capacitor2 = "/images/capacitor2.PNG"
+const capacitor3 = "/images/capacitor3.PNG"
+const capacitor4 = "/images/capacitor4.PNG"
+
 const istritpayterVideo = "https://kgmutreakokomnvevvbm.supabase.co/storage/v1/object/public/videos/istritpayterVideo.mp4";
 const psychesletterVideo = "https://kgmutreakokomnvevvbm.supabase.co/storage/v1/object/public/videos/psychesletterVideo.mp4";
 const reactVideo = "https://kgmutreakokomnvevvbm.supabase.co/storage/v1/object/public/videos/reactVideo.mp4";
+const capacitorVideo = "https://kgmutreakokomnvevvbm.supabase.co/storage/v1/object/public/videos/dswdScanner.mp4";
 
 const blankImage = "/images/blank.jpg";
 
@@ -74,7 +81,7 @@ const projectsNum = [
   {
     projectID: 2,
     title: "Istrit Payter 2025",
-    duration: "49 days",
+    duration: "50 days",
     active: false,
     language: "Html, Css, and Javascript",
     image: istritpayter,
@@ -136,23 +143,29 @@ const projectsNum = [
   },
   {
     projectID: 4,
-    title: "Next Js Project",
-    duration: "5 days",
+    title: "DSWD City Link Attendance Scanner",
+    duration: "2 days",
     active: false,
-    language: "",
-    genre: "",
-    relDate: "",
-    fileSize: "",
-    mirrors: "",
-    video: "",
-    image: blankImage,
-    image1: "",
-    image2: "",
-    image3: "",
-    image4: "",
-    date: "2020",
-    description1: "This is a project called Next Js Project. It is a web application developed using Next.js framework. The game was developed in 5 days and was released in 2020. The file size of the game is not specified. The game can be found on various mirrors/links.",
-    description2: "The Next Js Project is a modern web application that leverages the power of the Next.js framework to deliver a fast and responsive user experience. The project features server-side rendering, static site generation, and API routes, allowing for seamless integration with backend services. The application is designed with a focus on performance, scalability, and maintainability, making it an ideal choice for building dynamic web applications.",
+    language: "React/Capacitor/Android Studio",
+    genre: "Government/Community Tool",
+    relDate: "Feb 12, 2026",
+    fileSize: "291 MB",
+    mirrors: "Github, 4Shared",
+    sysreq2: "OS: Windows 7/8/10 (64-bit) or Android 5.0+ OS",
+    installnote1: "Enable install from Unknown Sources. Install and Scan.",
+    linknote: "Note: Link 1 - 4Shared Link, Link 2 - Github Repo",
+    link1: "https://www.4shared.com/mobile/BMoSuFpmku/City_Link_Attendance_Scanner.html?",
+    link2: "https://github.com/Andrei12388/dswd-attendance-scanner",
+    video: capacitorVideo,
+    image: capacitorProject,
+    image1: capacitor1,
+    image2: capacitor2,
+    image3: capacitor3,
+    image4: capacitor4,
+    date: "2026",
+    description1: "A react web application converted to APK for mobile use. It was use to easily check the attendance of the city links member, It can be stored online thru firebase and offline thru csv.",
+    description2: "I had used react framework to code the app, then convert it to apk using Capacitor and Android Studio.",
+    description3: "Google Firebase is the database I had used to store the scanned attendance online. I find it convenient, easy, and free to use.",
   },
   {
     projectID: 5,

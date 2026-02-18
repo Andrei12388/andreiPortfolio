@@ -119,6 +119,7 @@
     position: absolute;
     width: 30em;
     height: auto;
+    max-height: 28em;
     cursor: pointer;
     opacity: 1;
     
