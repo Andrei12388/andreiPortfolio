@@ -23,10 +23,14 @@ export async function POST(req: NextRequest) {
 
     // 1️⃣ Create collection
     const collection = await databases.createCollection(
-      process.env.DATABASE_ID!,
-      tableName.toLowerCase(),
-      tableName
-    );
+  process.env.DATABASE_ID!,    // database ID
+  tableName.toLowerCase(),     // collection ID
+  tableName,                   // collection name
+  [
+    "read:users",   // all authenticated users can read
+    "write:users"   // all authenticated users can create/update/delete
+  ]
+);
 
     // 2️⃣ Add attributes (columns)
     const dbId = process.env.DATABASE_ID!;
