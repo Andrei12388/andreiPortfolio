@@ -277,7 +277,7 @@ function PrevIndex() {
 
 
     return (
-        <main className="w-full overflow-x-hidden mt-10" >
+        <main className="w-full overflow-x-hidden overflow-y-hidden mt-10" >
            <section ref={section0Ref} data-section="section0"></section>
 
           
@@ -326,10 +326,23 @@ function PrevIndex() {
 >
   →
 </button>
-
+  
         </div>
   
     </div>
+      <div className="flex justify-center mb-5 space-x-2">
+  {projectsNum.map((proj, idx) => (
+    <div
+      key={proj.projectID}
+      className={`w-4 h-4 rounded-full border border-blue-300 flex items-center justify-center cursor-pointer text-sm
+        ${projectIndex === idx ? 'bg-blue-500 text-blue-500 font-bold' : 'bg-gray-200 text-gray-400'}`}
+      onClick={() => setProjectIndex(idx)}
+      title={proj.title}
+    >
+     
+    </div>
+  ))}
+</div>
 
    
     <div>
