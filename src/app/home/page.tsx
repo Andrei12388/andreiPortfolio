@@ -22,6 +22,12 @@ const react2 = "/images/react2.PNG";
 const react3 = "/images/react3.PNG";
 const react4 = "/images/react4.PNG";
 
+const capacitorProject = "/images/capacitorProject.PNG"
+const capacitor1 = "/images/capacitor1.PNG"
+const capacitor2 = "/images/capacitor2.PNG"
+const capacitor3 = "/images/capacitor3.PNG"
+const capacitor4 = "/images/capacitor4.PNG"
+
 import andreiPic from "./andreiPic.jpg";
 
 const onepiece = "https://kgmutreakokomnvevvbm.supabase.co/storage/v1/object/public/videos/onepiece.mp4";
@@ -34,6 +40,7 @@ const guitarheroxelectric = "https://kgmutreakokomnvevvbm.supabase.co/storage/v1
 const istritpayterVideo = "https://kgmutreakokomnvevvbm.supabase.co/storage/v1/object/public/videos/istritpayterVideo.mp4";
 const psychesletterVideo = "https://kgmutreakokomnvevvbm.supabase.co/storage/v1/object/public/videos/psychesletterVideo.mp4";
 const reactVideo = "https://kgmutreakokomnvevvbm.supabase.co/storage/v1/object/public/videos/reactVideo.mp4";
+const capacitorVideo = "https://kgmutreakokomnvevvbm.supabase.co/storage/v1/object/public/videos/dswdScanner.mp4";
 
 
 const htmlIcon = "/images/icons/html.png";
@@ -249,6 +256,7 @@ useEffect(() => {
     const projectsNum = [
     {projectID: 1, title: "Psyche's Letter", duration: "22 days", active: false, language: "Action Script 2.0", image: psychesImage, image1: psychesImage1, image2: psychesImage2, image3: psychesImage3, image4: psychesImage4, video: psychesletterVideo},
     {projectID: 2,title: "Istrit Payter 2025", duration: "50 days (Still ongoing)", active: false, language: "Html, Css, and Javascript", image: istritpayter, image1: istritpayter1, image2: istritpayter2, image3: istritpayter3, image4: istritpayter4, video: istritpayterVideo},
+    {projectID: 4,title: "DSWD City Link Attendance Scanner", duration: "2 days", active: false, language: "React/Capacitor/Android Studio",image: capacitorProject, image1: capacitor1, image2: capacitor2, image3: capacitor3, image4: capacitor4, video: capacitorVideo},
     {projectID: 3,title: "React Game Website", duration: "3 days", active: false, language: "React Framework/Javascript",image: reactProject, image1: react1, image2: react2, image3: react3, image4: react4, video: reactVideo},
    ]
 
@@ -268,7 +276,11 @@ function PrevIndex() {
 
 
     return (
-        <div className={styles.body} ref={section0Ref}>
+        <main className="w-full overflow-x-hidden">
+    <div
+      className={`${styles.body} mx-auto w-full max-w-screen-xl px-4 sm:px-6 md:px-8`}
+      ref={section0Ref}
+    >
             <div className={styles.bio} >
                 <div className={styles.imageHolder}>
                      <Image
@@ -927,5 +939,6 @@ function PrevIndex() {
 
    
     </div>
+    </main>
     );
 }

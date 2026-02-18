@@ -5,6 +5,13 @@ import './global.css'
 import { Metadata } from "next"
 import ProgressBar from "./components/ProgressBar/ProgressBar"
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 0.1,
+  maximumScale: 0.1,
+  userScalable: true,
+};
+
 
 export const metadata: Metadata = {
   title: {
