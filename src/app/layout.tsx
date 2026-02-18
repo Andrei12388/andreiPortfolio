@@ -1,6 +1,5 @@
 import CustomCursor from "./components/cursor"
 import Footer from "./Footer/page"
-import Header from "./Header/page"
 import './global.css'
 import { Metadata } from "next"
 import ProgressBar from "./components/ProgressBar/ProgressBar"
@@ -32,8 +31,7 @@ export default function RootLayout({
       <body>
         <ProgressBar />
         <CustomCursor/>
-        <Header></Header>
-        <div className="childrenContainer">
+        <div>
         {children}
         </div>
           <Footer></Footer>

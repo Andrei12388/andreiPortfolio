@@ -276,7 +276,7 @@ function PrevIndex() {
 
 
     return (
-        <main className="w-full overflow-x-hidden">
+        <main className="w-full overflow-x-hidden mt-10">
     <div
       className={`${styles.body} mx-auto w-full max-w-screen-xl px-4 sm:px-6 md:px-8`}
       ref={section0Ref}
@@ -328,18 +328,19 @@ function PrevIndex() {
    
     <div>
         <div className="flex flex-col justify-center items-center">
-     <a href="https://github.com/Andrei12388"
-    target="_blank"
     
-  rel="noopener noreferrer"
-    >
-     <GithubContributions /></a>
       <a href="https://andrei12388.itch.io/istrit-payter-2025"
     target="_blank"
   rel="noopener noreferrer"
     >
      <ItchAnalytics />
      </a>
+      <a href="https://github.com/Andrei12388"
+    target="_blank"
+    
+  rel="noopener noreferrer"
+    >
+     <GithubContributions /></a>
     </div>
       <section  ref={section2Ref}></section>
       <div className=" flex flex-col items-center align-middle justify-center ">
