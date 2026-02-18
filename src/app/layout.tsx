@@ -8,7 +8,7 @@ import ProgressBar from "./components/ProgressBar/ProgressBar"
 export const viewport = {
   width: "device-width",
   initialScale: 0.1,
-  maximumScale: 0.1,
+  maximumScale: 1,
   userScalable: true,
 };
 
