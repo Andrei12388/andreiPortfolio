@@ -49,17 +49,17 @@ export default function ItchAnalytics() {
       <div className="grid grid-cols-3 gap-4 text-center">
         <div>
           <p className="text-xl font-semibold">{stats.title}</p>
-          <p className="text-sm text-gray-600">Game</p>
+          <p className="text-sm text-blue-600">Game</p>
         </div>
 
         <div>
           <p className="text-xl font-semibold">{stats.views}</p>
-          <p className="text-sm text-gray-600">Views</p>
+          <p className="text-sm text-blue-600">Views</p>
         </div>
 
         <div>
           <p className="text-xl font-semibold">{stats.downloads}</p>
-          <p className="text-sm text-gray-600">Downloads</p>
+          <p className="text-sm text-blue-600">Downloads</p>
         </div>
       </div>
 
