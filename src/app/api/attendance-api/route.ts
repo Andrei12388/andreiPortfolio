@@ -1,6 +1,7 @@
 // src/app/api/attendance-api/route.ts
 import { NextRequest, NextResponse } from "next/server";
 import { Client, Databases } from "node-appwrite";
+import {  Permission, Role } from "node-appwrite";
 
 export async function POST(req: NextRequest) {
   try {
@@ -26,10 +27,10 @@ export async function POST(req: NextRequest) {
   process.env.DATABASE_ID!,    // database ID
   tableName.toLowerCase(),     // collection ID
   tableName,                   // collection name
-  [
-    "read:users",   // all authenticated users can read
-    "write:users"   // all authenticated users can create/update/delete
-  ]
+ [
+  Permission.read(Role.any()), // anyone can read
+  Permission.write(Role.any()), // anyone can write
+]
 );
 
     // 2️⃣ Add attributes (columns)
