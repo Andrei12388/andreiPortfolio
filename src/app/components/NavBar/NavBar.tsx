@@ -1,24 +1,99 @@
 'use client'
-//import Link from "next/link";
+
+import { useEffect, useState } from "react";
 import styles from "./NavBar.module.css"
 
-export default function NavBar(){
-     const handleScroll = (section: string) => {
-    // Dispatch a custom event
-    console.log('Scrolling to section:', section);
-    window.dispatchEvent(new CustomEvent("scrollToSection", { detail: section }));
+export default function NavBar() {
+  const [active, setActive] = useState("section0");
+
+  const sections = [
+    "section0",
+    "section1",
+    "section2",
+    "section3",
+    "section4",
+    "section5",
+    "section6",
+  ];
+
+  // ✅ click scroll
+  const handleScroll = (section: string) => {
+    console.log("🟦 CLICK → scrollToSection:", section);
+
+    setActive(section);
+
+    window.dispatchEvent(
+      new CustomEvent("scrollToSection", { detail: section })
+    );
   };
-    return(
-        <nav >
-            <ul className={styles.NavBar}>
-                <li><a className={styles.NavBarButton} onClick={() => handleScroll("top")}>About</a></li>
-                <li><a className={styles.NavBarButton} onClick={() => handleScroll("section1")}>Projects</a></li>
-                <li><a className={styles.NavBarButton} onClick={() => handleScroll("section2")}>Skills</a></li>
-                <li><a className={styles.NavBarButton} onClick={() => handleScroll("section3")}>Hobbies/Talents</a></li>
-                <li><a className={styles.NavBarButton} onClick={() => handleScroll("section4")}>Education</a></li>
-                <li><a className={styles.NavBarButton} onClick={() => handleScroll("section5")}>Contacts</a></li>
-                <li><a className={styles.NavBarButton} onClick={() => handleScroll("section6")}>Resume</a></li>
-            </ul>
-        </nav>
-    )
+
+  // 🔥 observe visible section
+  useEffect(() => {
+    const observers: IntersectionObserver[] = [];
+
+    console.log("👀 Nav observer mounted");
+
+    sections.forEach((id) => {
+      const el = document.querySelector(`[data-section="${id}"]`);
+
+      if (!el) {
+        console.log("❌ Section NOT FOUND:", id);
+        return;
+      }
+
+      console.log("✅ Observing section:", id);
+
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            console.log("🟢 ACTIVE SECTION:", id);
+            setActive(id);
+          }
+        },
+        {
+          threshold: 0.5,
+        }
+      );
+
+      observer.observe(el);
+      observers.push(observer);
+    });
+
+    return () => {
+      console.log("🧹 Cleaning observers");
+      observers.forEach((o) => o.disconnect());
+    };
+  }, []);
+
+  // ✅ log whenever active changes
+  useEffect(() => {
+    console.log("⭐ Current active =", active);
+  }, [active]);
+
+  const btn = (id: string, label: string) => (
+    <li>
+      <a
+        onClick={() => handleScroll(id)}
+        className={`${styles.NavBarButton} ${
+          active === id ? styles.NavBarButtonActive : ""
+        }`}
+      >
+        {label}
+      </a>
+    </li>
+  );
+
+  return (
+    <nav>
+      <ul className={styles.NavBar}>
+        {btn("section0", "About")}
+        {btn("section1", "Projects")}
+        {btn("section2", "Skills")}
+        {btn("section3", "Hobbies/Talents")}
+        {btn("section4", "Education")}
+        {btn("section5", "Contacts/Resume")}
+        {btn("section6", "Commisions")}
+      </ul>
+    </nav>
+  );
 }

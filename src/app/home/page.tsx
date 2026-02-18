@@ -109,6 +109,7 @@ export default function Home(){
   const section3Ref = useRef<HTMLDivElement | null>(null);
   const section4Ref = useRef<HTMLDivElement | null>(null);
   const section5Ref = useRef<HTMLDivElement | null>(null);
+  const section6Ref = useRef<HTMLDivElement | null>(null);
 
   const [percentShow1, setpercentShow1] = useState(false);
   const [percentShow2, setpercentShow2] = useState(false);
@@ -241,7 +242,7 @@ useEffect(() => {
         section5Ref.current?.scrollIntoView({ behavior: "smooth" });
       }
       if (section === "section6") {
-        section5Ref.current?.scrollIntoView({ behavior: "smooth" });
+        section6Ref.current?.scrollIntoView({ behavior: "smooth" });
       }
     };
 
@@ -276,10 +277,13 @@ function PrevIndex() {
 
 
     return (
-        <main className="w-full overflow-x-hidden mt-10">
+        <main className="w-full overflow-x-hidden mt-10" >
+           <section ref={section0Ref} data-section="section0"></section>
+
+          
     <div
       className={`${styles.body} mx-auto w-full max-w-screen-xl px-4 sm:px-6 md:px-8`}
-      ref={section0Ref}
+      
     >
             <div className={styles.bio} >
                 <div className={styles.imageHolder}>
@@ -296,7 +300,9 @@ function PrevIndex() {
         <div className={styles.bioText}>
          <h1 className={styles.pageText}>Although I did not pursue a formal IT degree, I have been self-taught in coding since <span className={styles.span}>2025</span>, driven by my long-time dream of becoming a programmer. This website showcases my projects along with a few of my personal hobbies, reflecting both my creativity and dedication to lifelong learning.</h1>
         </div>
-        <section ref={section1Ref}></section>
+        
+        <section ref={section1Ref} data-section="section1"></section>
+
     </div>
     
     <h1 className={styles.pageTitle} > Andrei&apos;s Projects</h1>
@@ -342,7 +348,8 @@ function PrevIndex() {
     >
      <GithubContributions /></a>
     </div>
-      <section  ref={section2Ref}></section>
+     <section ref={section2Ref} data-section="section2"></section>
+
       <div className=" flex flex-col items-center align-middle justify-center ">
                 <div>
                    
@@ -735,7 +742,7 @@ function PrevIndex() {
     </div>
     </div>
     <div>
-      <section ref={section3Ref}></section>
+      <section ref={section3Ref} data-section="section3"></section>
                 <div>
                   <br></br>
                   <br></br>
@@ -774,7 +781,7 @@ function PrevIndex() {
                
     </div>
     <div>
-      <section ref={section4Ref}></section>
+      <section ref={section4Ref} data-section="section4"></section>
                 <div>
                   <br></br>
                   <br></br>
@@ -817,7 +824,7 @@ function PrevIndex() {
                
     </div>
     <div>
-      <section ref={section5Ref}></section>
+      <section ref={section5Ref} data-section="section5"></section>
                 <div>
                   <br></br>
                   <br></br>
@@ -918,6 +925,7 @@ function PrevIndex() {
                     <br></br>
                       <br></br>
                       <br></br>
+                       <section ref={section6Ref} data-section="section6"></section>
                 <div className={styles.contactPage}>
                   <ContactForm />
                 </div>
