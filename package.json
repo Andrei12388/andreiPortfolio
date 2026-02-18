@@ -12,6 +12,7 @@
     "github-calendar": "^2.3.4",
     "mailgun.js": "^12.6.1",
     "next": "^15.5.12",
+    "node-appwrite": "^22.1.0",
     "nprogress": "^0.2.0",
     "react": "19.1.0",
     "react-confetti": "^6.4.0",
