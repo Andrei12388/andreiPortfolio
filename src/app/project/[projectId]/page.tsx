@@ -27,10 +27,17 @@ const capacitor2 = "/images/capacitor2.PNG"
 const capacitor3 = "/images/capacitor3.PNG"
 const capacitor4 = "/images/capacitor4.PNG"
 
+const reactnativeProject = "/images/reactnativeProject.PNG"
+const reactnative1 = "/images/reactnative1.PNG"
+const reactnative2 = "/images/reactnative2.PNG"
+const reactnative3 = "/images/reactnative3.PNG"
+const reactnative4 = "/images/reactnative4.PNG"
+
 const istritpayterVideo = "https://kgmutreakokomnvevvbm.supabase.co/storage/v1/object/public/videos/istritpayterVideo.mp4";
 const psychesletterVideo = "https://kgmutreakokomnvevvbm.supabase.co/storage/v1/object/public/videos/psychesletterVideo.mp4";
 const reactVideo = "https://kgmutreakokomnvevvbm.supabase.co/storage/v1/object/public/videos/reactVideo.mp4";
 const capacitorVideo = "https://kgmutreakokomnvevvbm.supabase.co/storage/v1/object/public/videos/dswdScanner.mp4";
+const reactnativeVideo = "https://kgmutreakokomnvevvbm.supabase.co/storage/v1/object/public/videos/reactnativeVideo.mp4";
 
 const blankImage = "/images/blank.jpg";
 
@@ -166,26 +173,40 @@ const projectsNum = [
     description1: "A react web application converted to APK for mobile use. It was use to easily check the attendance of the city links member, It can be stored online thru firebase and offline thru csv.",
     description2: "I had used react framework to code the app, then convert it to apk using Capacitor and Android Studio.",
     description3: "Google Firebase is the database I had used to store the scanned attendance online. I find it convenient, easy, and free to use.",
+    description4: "Tech Stack:",
+    description5: "Front End - React",
+    description6: "Back End - Firebase",
+    description7: "Database - Firebase/CSV",
+    description8: "Development/Build Tools - Capacitor/Android Studio"
   },
-  {
+   {
     projectID: 5,
-    title: "Sample Project",
-    duration: "5 days",
+    title: "React Native/Appwrite + NextJs Attendance Scanner",
+    duration: "6 days",
     active: false,
-    language: "",
-    genre: "",
-    relDate: "",
-    fileSize: "",
-    mirrors: "",
-    video: "",
-    image: blankImage,
-    image1: "",
-    image2: "",
-    image3: "",
-    image4: "",
-    date: "2020",
-    description1: "This is a project called Sample Project. It is a sample game developed using various technologies. The game was developed in 5 days and was released in 2020. The file size of the game is not specified. The game can be found on various mirrors/links.",
-    description2: "The Sample Project is a demonstration of various game development techniques and concepts. The project showcases different gameplay mechanics, graphics, and sound design elements to provide an engaging experience for players. The game is designed to be easily customizable and extendable, allowing developers to build upon the existing framework and create their own unique games.",
+    language: "React Native/Appwrite/NextJs",
+    genre: "Government/Community Tool",
+    relDate: "Feb 22, 2026",
+    fileSize: "6.02 GB",
+    mirrors: "Github, 4Shared",
+    sysreq2: "Android 9.0+ OS",
+    installnote1: "Enable install from Unknown Sources. Install and Scan.",
+    linknote: "Note: Link 1 - 4Shared Link, Link 2 - Github Repo",
+    link1: "https://www.4shared.com/file/GMZe-cFgjq/React_Native_Attendance_Scanne.html?",
+    link2: "https://github.com/Andrei12388/React_Native_Project",
+    video: reactnativeVideo,
+    image: reactnativeProject,
+    image1: reactnative1,
+    image2: reactnative2,
+    image3: reactnative3,
+    image4: reactnative4,
+    date: "2026",
+    description1: "My first React Native App Project. I had used this project to learn how to develop a mobile application using this framework and at first I find it confusing because of the naming convention of the components.",
+    description2: "Later on, I find it fun to use. I can easily test the application using Expo Go using my Phone and it was a great advantage instead of using Android Studio (Which is not suitable for my device because of lags).",
+    description3: "I had used appwrite as Backend/Database and NextJs for Api. I am planning to clone some of the famous mobile apps soon to strengthen my skills in this framework.",
+    description4: "Tech Stack:",
+    description5: "Front End - React Native",
+    description6: "Back End - Appwrite/NextJs",
   },
   {
     projectID: 6,
