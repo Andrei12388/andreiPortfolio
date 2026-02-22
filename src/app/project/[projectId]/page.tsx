@@ -182,7 +182,7 @@ const projectsNum = [
    {
     projectID: 5,
     title: "React Native/Appwrite + NextJs Attendance Scanner",
-    duration: "6 days",
+    duration: "6 days (Still Ongoing)",
     active: false,
     language: "React Native/Appwrite/NextJs",
     genre: "Government/Community Tool",
