@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.6.1",
     "github-calendar": "^2.3.4",
     "mailgun.js": "^12.6.1",
     "next": "^15.5.12",

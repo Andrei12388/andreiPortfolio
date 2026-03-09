@@ -3,6 +3,7 @@ import Footer from "./Footer/page"
 import './global.css'
 import { Metadata } from "next"
 import ProgressBar from "./components/ProgressBar/ProgressBar"
+import { Analytics } from '@vercel/analytics/next'
 
 export const viewport = {
   width: "device-width",
@@ -35,7 +36,7 @@ export default function RootLayout({
         {children}
         </div>
           <Footer></Footer>
-        
+        <Analytics />
         </body>
     </html>
   )
