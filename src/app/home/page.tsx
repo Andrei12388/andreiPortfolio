@@ -170,22 +170,28 @@ export default function Home(){
   const clickedVideo = videoRefs.current[index];
   if (!clickedVideo) return;
 
+  // if clicking the active video → deactivate it
+  if (activeVideoIndex === index) {
+    clickedVideo.muted = true;
+    clickedVideo.pause();
+    setActiveVideoIndex(null);
+    return;
+  }
+
+  // activate clicked video
   videoRefs.current.forEach((video, i) => {
     if (!video) return;
 
     if (i === index) {
-      // clicked video → unmute & play
       video.muted = false;
-      video.play().catch(() => {}); // catch in case autoplay is blocked
+      video.play().catch(() => {});
     } else {
-      // other videos → mute & pause
       video.muted = true;
       video.pause();
     }
   });
 
-  // update active video index
-  setActiveVideoIndex(activeVideoIndex === index ? null : index);
+  setActiveVideoIndex(index);
 };
 
 

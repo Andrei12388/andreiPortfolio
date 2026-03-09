@@ -43,10 +43,12 @@ export default function ImageVideoSlide({ project }: {
     height="240"
     autoPlay
     muted
-    controls
     loop
+    playsInline
+    preload="none"
+    controls
   >
-    <source src={`${project.video}`} type="video/mp4" />
+     <source src={`${project.video}`} type="video/webm" />
     Your browser does not support the video tag.
   </video>
 

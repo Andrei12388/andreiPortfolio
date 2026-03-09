@@ -33,12 +33,11 @@ const reactnative2 = "/images/reactnative2.PNG"
 const reactnative3 = "/images/reactnative3.PNG"
 const reactnative4 = "/images/reactnative4.PNG"
 
-const istritpayterVideo = "/videos/istritpayterVideo.mp4";
-const psychesletterVideo = "/videos/psychesletterVideo.mp4";
-const reactVideo = "/videos/reactVideo.mp4";
-const capacitorVideo = "/videos/dswdScanner.mp4";
-const reactnativeVideo = "/videos/reactnativeVideo.mp4";
-
+const istritpayterVideo = "/videos/webm/istritpayterVideo.webm";
+const psychesletterVideo = "/videos/webm/psychesletterVideo.webm";
+const reactVideo = "/videos/webm/reactVideo.webm";
+const capacitorVideo = "/videos/webm/dswdScanner.webm";
+const reactnativeVideo = "/videos/webm/reactnativeVideo.webm";
 const blankImage = "/images/blank.jpg";
 
 const projectsNum = [
