@@ -33,11 +33,11 @@ const reactnative2 = "/images/reactnative2.PNG"
 const reactnative3 = "/images/reactnative3.PNG"
 const reactnative4 = "/images/reactnative4.PNG"
 
-const istritpayterVideo = "https://kgmutreakokomnvevvbm.supabase.co/storage/v1/object/public/videos/istritpayterVideo.mp4";
-const psychesletterVideo = "https://kgmutreakokomnvevvbm.supabase.co/storage/v1/object/public/videos/psychesletterVideo.mp4";
-const reactVideo = "https://kgmutreakokomnvevvbm.supabase.co/storage/v1/object/public/videos/reactVideo.mp4";
-const capacitorVideo = "https://kgmutreakokomnvevvbm.supabase.co/storage/v1/object/public/videos/dswdScanner.mp4";
-const reactnativeVideo = "https://kgmutreakokomnvevvbm.supabase.co/storage/v1/object/public/videos/reactnativeVideo.mp4";
+const istritpayterVideo = "/videos/istritpayterVideo.mp4";
+const psychesletterVideo = "/videos/psychesletterVideo.mp4";
+const reactVideo = "/videos/reactVideo.mp4";
+const capacitorVideo = "/videos/dswdScanner.mp4";
+const reactnativeVideo = "/videos/reactnativeVideo.mp4";
 
 const blankImage = "/images/blank.jpg";
 

@@ -317,22 +317,25 @@
     margin-right: 5px;
 }
 
-.video{
+.videoContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* exactly 3 columns */
+    gap: 10px; /* spacing between videos */
+    justify-items: center; /* center videos in each column */
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.video {
+    width: 100%;       /* fill the column */
+    height: 200px;     /* fixed height for uniformity */
+    object-fit: cover; /* crop or scale video like Instagram */
     border: 1px solid var(--pinkcolor);
     border-radius: 10px;
     filter: drop-shadow(0 0 10px var(--pinkcolor));
     transition: all 0.3s ease-in-out;
-    max-width: 320;
-     max-height: 240;
-}
-
-.videoContainer {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 15px;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
+    cursor: pointer;
 }
 
 .video.active {

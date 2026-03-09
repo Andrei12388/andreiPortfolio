@@ -36,18 +36,21 @@ const reactnative4 = "/images/reactnative4.PNG"
 
 import andreiPic from "./andreiPic.jpg";
 
-const onepiece = "https://kgmutreakokomnvevvbm.supabase.co/storage/v1/object/public/videos/onepiece.mp4";
-const lagibini = "https://kgmutreakokomnvevvbm.supabase.co/storage/v1/object/public/videos/lagibini.mp4";
-const mist = "https://kgmutreakokomnvevvbm.supabase.co/storage/v1/object/public/videos/mist.mp4";
-const sincerely = "https://kgmutreakokomnvevvbm.supabase.co/storage/v1/object/public/videos/sincerely.mp4";
-const rubiks = "https://kgmutreakokomnvevvbm.supabase.co/storage/v1/object/public/videos/rubiks.mp4";
-const guitarheroxelectric = "https://kgmutreakokomnvevvbm.supabase.co/storage/v1/object/public/videos/guitarheroxelectric.mp4";
+const gallery1 = "/videos/gallery1.mp4";
+const gallery2 = "/videos/gallery2.mp4";
+const gallery3 = "/videos/gallery3.mp4";
+const gallery4 = "/videos/gallery4.mp4";
+const gallery5 = "/videos/gallery5.mp4";
+const gallery6 = "/videos/gallery6.mp4";
+const gallery7 = "/videos/gallery7.mp4";
+const gallery8 = "/videos/gallery8.mp4";
+const gallery9 = "/videos/gallery9.mp4";
 
-const istritpayterVideo = "https://kgmutreakokomnvevvbm.supabase.co/storage/v1/object/public/videos/istritpayterVideo.mp4";
-const psychesletterVideo = "https://kgmutreakokomnvevvbm.supabase.co/storage/v1/object/public/videos/psychesletterVideo.mp4";
-const reactVideo = "https://kgmutreakokomnvevvbm.supabase.co/storage/v1/object/public/videos/reactVideo.mp4";
-const capacitorVideo = "https://kgmutreakokomnvevvbm.supabase.co/storage/v1/object/public/videos/dswdScanner.mp4";
-const reactnativeVideo = "https://kgmutreakokomnvevvbm.supabase.co/storage/v1/object/public/videos/reactnativeVideo.mp4";
+const istritpayterVideo = "/videos/istritpayterVideo.mp4";
+const psychesletterVideo = "/videos/psychesletterVideo.mp4";
+const reactVideo = "/videos/reactVideo.mp4";
+const capacitorVideo = "/videos/dswdScanner.mp4";
+const reactnativeVideo = "/videos/reactnativeVideo.mp4";
 
 
 const htmlIcon = "/images/icons/html.png";
@@ -163,29 +166,28 @@ export default function Home(){
   const videoRefs = useRef<HTMLVideoElement[]>([]);
   const [activeVideoIndex, setActiveVideoIndex] = useState<number | null>(null);
 
-  const handleVideoClick = (index: number) => {
+ const handleVideoClick = (index: number) => {
   const clickedVideo = videoRefs.current[index];
   if (!clickedVideo) return;
 
-  if (activeVideoIndex !== index) {
-    // New video clicked → unmute & mark as active
-    videoRefs.current.forEach((video, i) => {
-      if (!video) return;
-      video.muted = i !== index; // mute all others
-    });
-    setActiveVideoIndex(index);
-  } else {
-    // Same video clicked → just toggle mute
-    clickedVideo.muted = !clickedVideo.muted;
+  videoRefs.current.forEach((video, i) => {
+    if (!video) return;
 
-    // If toggled back to muted, also remove active class
-    if (clickedVideo.muted) {
-      setActiveVideoIndex(null);
+    if (i === index) {
+      // clicked video → unmute & play
+      video.muted = false;
+      video.play().catch(() => {}); // catch in case autoplay is blocked
     } else {
-      setActiveVideoIndex(index);
+      // other videos → mute & pause
+      video.muted = true;
+      video.pause();
     }
-  }
+  });
+
+  // update active video index
+  setActiveVideoIndex(activeVideoIndex === index ? null : index);
 };
+
 
 //for floating animation
 useEffect(() => {
@@ -222,40 +224,37 @@ useEffect(() => {
 
 
   useEffect(() => {
-    const handler = (e: Event) => {
-      const customEvent = e as CustomEvent<string>;
-      const section = customEvent.detail;
-      
+  const scrollToSection = (ref: React.RefObject<HTMLDivElement | null>) => {
+    if (!ref.current) return;
 
-      if (section === "top") {
-        window.scrollTo({ top: 0, behavior: "smooth" }); 
-      }
-      if (section === "section0") {
-        section0Ref.current?.scrollIntoView({ behavior: "smooth" });
-      }
-      if (section === "section1") {
-        section1Ref.current?.scrollIntoView({ behavior: "smooth" });
-      }
-      if (section === "section2") {
-        section2Ref.current?.scrollIntoView({ behavior: "smooth" });
-      }
-      if (section === "section3") {
-        section3Ref.current?.scrollIntoView({ behavior: "smooth" });
-      }
-      if (section === "section4") {
-        section4Ref.current?.scrollIntoView({ behavior: "smooth" });
-      }
-      if (section === "section5") {
-        section5Ref.current?.scrollIntoView({ behavior: "smooth" });
-      }
-      if (section === "section6") {
-        section6Ref.current?.scrollIntoView({ behavior: "smooth" });
-      }
-    };
+    const yOffset = -80;
+    const y =
+      ref.current.getBoundingClientRect().top +
+      window.pageYOffset +
+      yOffset;
 
-    window.addEventListener("scrollToSection", handler);
-    return () => window.removeEventListener("scrollToSection", handler);
-  }, []);
+    window.scrollTo({ top: y, behavior: "smooth" });
+  };
+
+  const handler = (e: Event) => {
+    const customEvent = e as CustomEvent<string>;
+    const section = customEvent.detail;
+
+    if (section === "top") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    if (section === "section1") scrollToSection(section1Ref);
+    if (section === "section2") scrollToSection(section2Ref);
+    if (section === "section3") scrollToSection(section3Ref);
+    if (section === "section4") scrollToSection(section4Ref);
+    if (section === "section5") scrollToSection(section5Ref);
+    if (section === "section6") scrollToSection(section6Ref);
+  };
+
+  window.addEventListener("scrollToSection", handler);
+  return () => window.removeEventListener("scrollToSection", handler);
+}, []);
 
     const [projectIndex, setProjectIndex] = useState(0);
    
@@ -771,8 +770,8 @@ function PrevIndex() {
                      
                 </div>
                 <div className={styles.videoContainer}>
-        {[lagibini, onepiece,
-          mist,  sincerely, rubiks, guitarheroxelectric
+        {[gallery1, gallery2,
+          gallery3,  gallery4, gallery5, gallery6, gallery7, gallery8, gallery9,
         ].map((src, index) => (
           <video
             key={src}
@@ -782,8 +781,11 @@ function PrevIndex() {
             className={`${styles.video} ${activeVideoIndex === index ? styles.active : ""}`}
             width="320"
             height="240"
-            
-            autoPlay
+            onMouseEnter={() => videoRefs.current[index]?.play()}
+            onMouseLeave={() => {
+              const video = videoRefs.current[index];
+              if (video && activeVideoIndex !== index) video.pause();
+            }}
             muted
             loop
             onClick={() => handleVideoClick(index)}
