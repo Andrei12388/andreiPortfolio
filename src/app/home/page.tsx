@@ -36,21 +36,21 @@ const reactnative4 = "/images/reactnative4.PNG"
 
 import andreiPic from "./andreiPic.jpg";
 
-const gallery1 = "/videos/gallery1.mp4";
-const gallery2 = "/videos/gallery2.mp4";
-const gallery3 = "/videos/gallery3.mp4";
-const gallery4 = "/videos/gallery4.mp4";
-const gallery5 = "/videos/gallery5.mp4";
-const gallery6 = "/videos/gallery6.mp4";
-const gallery7 = "/videos/gallery7.mp4";
-const gallery8 = "/videos/gallery8.mp4";
-const gallery9 = "/videos/gallery9.mp4";
+const gallery1 = "gallery1.webm";
+const gallery2 = "gallery2.webm";
+const gallery3 = "gallery3.webm";
+const gallery4 = "gallery4.webm";
+const gallery5 = "gallery5.webm";
+const gallery6 = "gallery6.webm";
+const gallery7 = "gallery7.webm";
+const gallery8 = "gallery8.webm";
+const gallery9 = "gallery9.webm";
 
-const istritpayterVideo = "/videos/istritpayterVideo.mp4";
-const psychesletterVideo = "/videos/psychesletterVideo.mp4";
-const reactVideo = "/videos/reactVideo.mp4";
-const capacitorVideo = "/videos/dswdScanner.mp4";
-const reactnativeVideo = "/videos/reactnativeVideo.mp4";
+const istritpayterVideo = "/videos/webm/istritpayterVideo.webm";
+const psychesletterVideo = "/videos/webm/psychesletterVideo.webm";
+const reactVideo = "/videos/webm/reactVideo.webm";
+const capacitorVideo = "/videos/webm/dswdScanner.webm";
+const reactnativeVideo = "/videos/webm/reactnativeVideo.webm";
 
 
 const htmlIcon = "/images/icons/html.png";
@@ -781,6 +781,8 @@ function PrevIndex() {
             className={`${styles.video} ${activeVideoIndex === index ? styles.active : ""}`}
             width="320"
             height="240"
+            playsInline
+            preload="metadata"
             onMouseEnter={() => videoRefs.current[index]?.play()}
             onMouseLeave={() => {
               const video = videoRefs.current[index];
@@ -790,7 +792,7 @@ function PrevIndex() {
             loop
             onClick={() => handleVideoClick(index)}
           >
-            <source src={`${src}`} type="video/mp4" />
+             <source src={`/videos/webm/${src}`} type="video/webm" />
             Your browser does not support the video tag.
           </video>
         ))}

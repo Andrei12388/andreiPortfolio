@@ -61,17 +61,19 @@ export default function HomeCard({ project }: {
      onMouseLeave={hoveredCoverOut}>
   {/* Video */}
   <video
-    className={`${styles.video} ${showVideo ? styles.fadeIn : styles.fadeOut}`}
-    width="320"
-    height="240"
-    autoPlay
-    muted
-    loop
-    onClick={clickedImage}
-  >
-    <source src={`${project.video}`} type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
+  className={`${styles.video} ${showVideo ? styles.fadeIn : styles.fadeOut}`}
+  width="320"
+  height="240"
+  muted
+  loop
+  playsInline
+  preload="none"
+  onMouseEnter={(e) => e.currentTarget.play()}
+  onMouseLeave={(e) => e.currentTarget.pause()}
+  onClick={clickedImage}
+>
+  <source src={`${project.video}`} type="video/webm" />
+</video>
 
   {/* Image */}
   <Image
