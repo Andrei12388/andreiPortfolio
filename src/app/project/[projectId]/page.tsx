@@ -33,11 +33,18 @@ const reactnative2 = "/images/reactnative2.PNG"
 const reactnative3 = "/images/reactnative3.PNG"
 const reactnative4 = "/images/reactnative4.PNG"
 
+const JCSGOProject = "/images/JCSGOProject.PNG"
+const JCSGO1 = "/images/JCSGO1.PNG"
+const JCSGO2 = "/images/JCSGO2.PNG"
+const JCSGO3 = "/images/JCSGO3.PNG"
+const JCSGO4 = "/images/JCSGO4.PNG"
+
 const istritpayterVideo = "/videos/webm/istritpayterVideo.webm";
 const psychesletterVideo = "/videos/webm/psychesletterVideo.webm";
 const reactVideo = "/videos/webm/reactVideo.webm";
 const capacitorVideo = "/videos/webm/dswdScanner.webm";
 const reactnativeVideo = "/videos/webm/reactnativeVideo.webm";
+const jcsgoVideo = "/videos/webm/jcsgoVideo.webm";
 const blankImage = "/images/blank.jpg";
 
 const projectsNum = [
@@ -209,23 +216,34 @@ const projectsNum = [
   },
   {
     projectID: 6,
-    title: "Sample Project 2",
-    duration: "5 days",
+    title: "JCSGO San Isidro System",
+    duration: "20 days (Still onGoing)",
     active: false,
-    language: "",
-    genre: "",
-    relDate: "",
-    fileSize: "",
-    mirrors: "",
-    video: "",
-    image: blankImage,
-    image1: "",
-    image2: "",
-    image3: "",
-    image4: "",
-    date: "2020",
-    description1: "This is a project called Sample Project 2. It is a sample game developed using various technologies. The game was developed in 5 days and was released in 2020. The file size of the game is not specified. The game can be found on various mirrors/links.",
-    description2: "The Sample Project 2 is a continuation of the original Sample Project, featuring new gameplay mechanics, improved graphics, and enhanced sound design elements. The project aims to provide players with an even more engaging and immersive experience, while also showcasing the latest advancements in game development techniques. The game is designed to be easily customizable and extendable, allowing developers to build upon the existing framework and create their own unique games.",
+    language: "Nextjs, Prisma, Typescript",
+    genre: "System/Website",
+    relDate: "Feb 28, 2026",
+    fileSize: "1.33 GB",
+    sysreq2: "OS: Windows 7/8/10 (64-bit) or Android 5.0+ OS",
+    mirrors: "Website Link",
+    installnote1: "No need to install. It can be tested on Browser.",
+    linknote: "Note: Link 1 - Website Link",
+    link1: "http://jcsgo-san-isidro.vercel.app",
+    video: jcsgoVideo,
+    image: JCSGOProject,
+    image1: JCSGO1,
+    image2: JCSGO2,
+    image3: JCSGO3,
+    image4: JCSGO4,
+    date: "2026",
+    description1: "This is a website dedicated to our church in San Isidro Montalban.",
+    description2: "Main Features:",
+    description3: "- User Logins (with User Roles like admin, member etc)",
+    description4: "- Attendance System",
+    description5: "- Calendar and Event Management",
+    description6: "- Chat System",
+    description7: "- Post Devotion",
+    description8: "- Join Ministries and check trainings",
+    description9: "- Edit Own Profile",
   },
   ];
   
