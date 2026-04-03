@@ -39,12 +39,20 @@ const JCSGO2 = "/images/JCSGO2.PNG"
 const JCSGO3 = "/images/JCSGO3.PNG"
 const JCSGO4 = "/images/JCSGO4.PNG"
 
+const marioProject = "/images/marioProject.PNG"
+const mario1 = "/images/mario1.PNG"
+const mario2 = "/images/mario2.PNG"
+const mario3 = "/images/mario3.PNG"
+const mario4 = "/images/mario4.PNG"
+
 const istritpayterVideo = "/videos/webm/istritpayterVideo.webm";
 const psychesletterVideo = "/videos/webm/psychesletterVideo.webm";
 const reactVideo = "/videos/webm/reactVideo.webm";
 const capacitorVideo = "/videos/webm/dswdScanner.webm";
 const reactnativeVideo = "/videos/webm/reactnativeVideo.webm";
 const jcsgoVideo = "/videos/webm/jcsgoVideo.webm";
+const marioVideo = "/videos/webm/marioVideo.webm";
+
 const blankImage = "/images/blank.jpg";
 
 const projectsNum = [
@@ -244,6 +252,41 @@ const projectsNum = [
     description7: "- Post Devotion",
     description8: "- Join Ministries and check trainings",
     description9: "- Edit Own Profile",
+  },
+   {
+    projectID: 7,
+    title: "Super Mario Sep (Meme by IJI)",
+    duration: "3 days",
+    active: false,
+    language: "Html, Css, and Javascript",
+    image: marioProject,
+    date: "March 2026",
+    genre: "Web-based/Mobile Game",
+    relDate: "April 1, 2026",
+    fileSize: "336 MB",
+    mirrors: "itch.io, github",
+    video: marioVideo,
+    image1: mario1,
+    image2: mario2,
+    image3: mario3,
+    image4: mario4,
+    installnote1: "The game is currently in development. Playtest is now available on itch.io",
+    sysreq1: "Platforms: Mobile (Apk) and PC (Web Browser)", 
+    sysreq2: "OS: Windows 7/8/10 (64-bit) or Android 5.0+ OS",
+    sysreq3: "Memory: 1 GB RAM",
+    sysreq4: "Storage: 100 MB available space",
+
+    link1: "https://andrei12388.itch.io/super-mario-sep",
+    link2: "https://github.com/Andrei12388/superMarioSep",
+    linknote: "Note: Link 1 - Itch io (Game Link), Link 2 - Github (Source Code)",
+
+    description1: "Another Meme to Game.",
+    description2: "Super Mario Sep (2026) — Web/Mobile Game Project",
+    description3: "Non Emulator, Non Mugen, Non Game Engine. Just in Pure Javascript",
+    description4: "Meme created by: IJI",
+    description5: "Project Started: March 27, 2026",
+    description6: "Status: Under Development.",
+    description7: "Latest Update: April 1, 2026",
   },
   ];
   

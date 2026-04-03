@@ -40,6 +40,12 @@ const JCSGO2 = "/images/JCSGO2.PNG"
 const JCSGO3 = "/images/JCSGO3.PNG"
 const JCSGO4 = "/images/JCSGO4.PNG"
 
+const marioProject = "/images/marioProject.PNG"
+const mario1 = "/images/mario1.PNG"
+const mario2 = "/images/mario2.PNG"
+const mario3 = "/images/mario3.PNG"
+const mario4 = "/images/mario4.PNG"
+
 import andreiPic from "./andreiPic.jpg";
 
 const gallery1 = "gallery1.webm";
@@ -58,6 +64,7 @@ const reactVideo = "/videos/webm/reactVideo.webm";
 const capacitorVideo = "/videos/webm/dswdScanner.webm";
 const reactnativeVideo = "/videos/webm/reactnativeVideo.webm";
 const jcsgoVideo = "/videos/webm/jcsgoVideo.webm";
+const marioVideo = "/videos/webm/marioVideo.webm";
 
 
 const htmlIcon = "/images/icons/html.png";
@@ -277,6 +284,7 @@ useEffect(() => {
     {projectID: 2,title: "Istrit Payter 2025", duration: "50 days (Still ongoing)", active: false, language: "Html, Css, and Javascript", image: istritpayter, image1: istritpayter1, image2: istritpayter2, image3: istritpayter3, image4: istritpayter4, video: istritpayterVideo},
      {projectID: 1, title: "Psyche's Letter", duration: "22 days", active: false, language: "Action Script 2.0", image: psychesImage, image1: psychesImage1, image2: psychesImage2, image3: psychesImage3, image4: psychesImage4, video: psychesletterVideo},
      {projectID: 6,title: "JCSGO San Isidro System", duration: "20 days", active: false, language: "Nextjs, Prisma, Typescript",image: JCSGOProject, image1: JCSGO1, image2: JCSGO2, image3: JCSGO3, image4: JCSGO4, video: jcsgoVideo},
+     {projectID: 7,title: "Super Mario Sep (Meme by IJI)", duration: "3 days", active: false, language: "Javascript",image: marioProject, image1: mario1, image2: mario2, image3: mario3, image4: mario4, video: marioVideo},
     {projectID: 4,title: "DSWD City Link Attendance Scanner", duration: "2 days", active: false, language: "React/Capacitor/Android Studio",image: capacitorProject, image1: capacitor1, image2: capacitor2, image3: capacitor3, image4: capacitor4, video: capacitorVideo},
      {projectID: 5,title: "React Native/Appwrite + NextJs Attendance Scanner", duration: "6 days (Still ongoing)", active: false, language: "React Native/Appwrite/NextJs",image: reactnativeProject, image1: reactnative1, image2: reactnative2, image3: reactnative3, image4: reactnative4, video: reactnativeVideo},
     {projectID: 3,title: "React Game Website", duration: "3 days", active: false, language: "React Framework/Javascript",image: reactProject, image1: react1, image2: react2, image3: react3, image4: react4, video: reactVideo},
