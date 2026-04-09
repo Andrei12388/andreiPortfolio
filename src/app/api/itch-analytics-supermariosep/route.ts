@@ -17,7 +17,7 @@ interface ItchResponse {
 
 export async function GET() {
   const apiKey = process.env.ITCH_API_KEY;
-  const gameId = Number(process.env.ITCH_GAME_ID);
+  const gameId = Number(process.env.ITCH_GAME_ID_SUPERMARIOSEP);
 
   if (!apiKey || !gameId) {
     return NextResponse.json(

@@ -5,22 +5,22 @@ import { useEffect, useState } from "react";
 interface ItchStats {
   views: number;
   downloads: number;
-  cover_img: string;
   browserplays: number;
   title: string;
+  cover_img: string;
 
   // optional because API may not return it
   downloads_over_time?: number[];
 }
 
-export default function ItchAnalytics() {
+export default function ItchAnalyticsSuperMarioSep() {
   const [stats, setStats] = useState<ItchStats | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const loadStats = async () => {
       try {
-        const res = await fetch("/api/itch-analytics");
+        const res = await fetch("/api/itch-analytics-supermariosep");
         const data: ItchStats = await res.json();
 
         setStats(data);
@@ -34,7 +34,7 @@ export default function ItchAnalytics() {
     loadStats();
   }, []);
 
-  if (loading) return <p>Loading Istrit Payter analytics...</p>;
+  if (loading) return <p>Loading SuperMarioSep analytics...</p>;
   if (!stats) return <p>No analytics available.</p>;
 
   return (
@@ -45,9 +45,8 @@ export default function ItchAnalytics() {
         hover:scale-110
       "
     >
-     
 
-       <div className="flex items-center gap-8">
+    <div className="flex items-center gap-8">
   <img src={stats.cover_img} className="w-12 h-12" />
 
   <div className="flex-1 min-w-0">

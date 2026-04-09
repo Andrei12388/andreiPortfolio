@@ -117,6 +117,7 @@ import Image, { StaticImageData } from "next/image";
 import { ContactForm } from "../components/ContactForm/ContactForm";
 import GithubContributions from "../components/GithubCalendar";
 import ItchAnalytics from "../components/ItchAnalytics";
+import ItchAnalyticsSuperMarioSep from "../components/ItchAnalytics-supermariosep";
 
 /*export const metadata: Metadata = {
     title: "Home",
@@ -376,13 +377,20 @@ function PrevIndex() {
    
     <div>
         <div className="flex flex-col justify-center items-center">
-    
+       <h2 className="text-xl font-bold mt-4">Itch.io Analytics</h2>
       <a href="https://andrei12388.itch.io/istrit-payter-2025"
     target="_blank"
   rel="noopener noreferrer"
     >
      <ItchAnalytics />
      </a>
+     <a href="https://andrei12388.itch.io/super-mario-sep"
+    target="_blank"
+  rel="noopener noreferrer"
+    >
+      <ItchAnalyticsSuperMarioSep/>
+    </a>
+      
       <a href="https://github.com/Andrei12388"
     target="_blank"
     
