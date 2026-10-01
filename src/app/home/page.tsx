@@ -5,47 +5,6 @@ import styles from './Home.module.css';
 
 const coinSound = "/audios/coin.mp3";
 
-const psychesImage = "/images/psychesletter.PNG";
-const psychesImage1 = "/images/psychesletter1.PNG";
-const psychesImage2 = "/images/psychesletter2.PNG";
-const psychesImage3 = "/images/psychesletter3.PNG";
-const psychesImage4 = "/images/psychesletter4.PNG";
-const istritpayter = "/images/istritpayter.PNG";
-const istritpayter1 = "/images/istritpayter1.PNG";
-const istritpayter2 = "/images/istritpayter2.PNG";
-const istritpayter3 = "/images/istritpayter3.PNG";
-const istritpayter4 = "/images/istritpayter4.PNG";
-
-const reactProject = "/images/reactProject.PNG";
-const react1 = "/images/react1.PNG";
-const react2 = "/images/react2.PNG";
-const react3 = "/images/react3.PNG";
-const react4 = "/images/react4.PNG";
-
-const capacitorProject = "/images/capacitorProject.PNG"
-const capacitor1 = "/images/capacitor1.PNG"
-const capacitor2 = "/images/capacitor2.PNG"
-const capacitor3 = "/images/capacitor3.PNG"
-const capacitor4 = "/images/capacitor4.PNG"
-
-const reactnativeProject = "/images/reactnativeProject.PNG"
-const reactnative1 = "/images/reactnative1.PNG"
-const reactnative2 = "/images/reactnative2.PNG"
-const reactnative3 = "/images/reactnative3.PNG"
-const reactnative4 = "/images/reactnative4.PNG"
-
-const JCSGOProject = "/images/JCSGOProject.PNG"
-const JCSGO1 = "/images/JCSGO1.PNG"
-const JCSGO2 = "/images/JCSGO2.PNG"
-const JCSGO3 = "/images/JCSGO3.PNG"
-const JCSGO4 = "/images/JCSGO4.PNG"
-
-const marioProject = "/images/marioProject.PNG"
-const mario1 = "/images/mario1.PNG"
-const mario2 = "/images/mario2.PNG"
-const mario3 = "/images/mario3.PNG"
-const mario4 = "/images/mario4.PNG"
-
 import andreiPic from "./andreiPic.jpg";
 
 const gallery1 = "gallery1.webm";
@@ -57,15 +16,6 @@ const gallery6 = "gallery6.webm";
 const gallery7 = "gallery7.webm";
 const gallery8 = "gallery8.webm";
 const gallery9 = "gallery9.webm";
-
-const istritpayterVideo = "/videos/webm/istritpayterVideo.webm";
-const psychesletterVideo = "/videos/webm/psychesletterVideo.webm";
-const reactVideo = "/videos/webm/reactVideo.webm";
-const capacitorVideo = "/videos/webm/dswdScanner.webm";
-const reactnativeVideo = "/videos/webm/reactnativeVideo.webm";
-const jcsgoVideo = "/videos/webm/jcsgoVideo.webm";
-const marioVideo = "/videos/webm/marioVideo.webm";
-
 
 const htmlIcon = "/images/icons/html.png";
 const cssIcon = "/images/icons/css.png";
@@ -113,19 +63,12 @@ const languageIcon = "/images/icons/language.png";
 
 
 import React, { useEffect, useRef, useState } from "react";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import { ContactForm } from "../components/ContactForm/ContactForm";
 import GithubContributions from "../components/GithubCalendar";
 import ItchAnalytics from "../components/ItchAnalytics";
 import ItchAnalyticsSuperMarioSep from "../components/ItchAnalytics-supermariosep";
-
-/*export const metadata: Metadata = {
-    title: "Home",
-}
-    */
-
-
-
+import { projectList, projectOrder } from "../project/project";
 
 export default function Home(){
   const section0Ref = useRef<HTMLDivElement | null>(null);
@@ -281,15 +224,9 @@ useEffect(() => {
    
       
 
-    const projectsNum = [
-    {projectID: 2,title: "Istrit Payter 2025", duration: "50 days (Still ongoing)", active: false, language: "Html, Css, and Javascript", image: istritpayter, image1: istritpayter1, image2: istritpayter2, image3: istritpayter3, image4: istritpayter4, video: istritpayterVideo},
-     {projectID: 1, title: "Psyche's Letter", duration: "22 days", active: false, language: "Action Script 2.0", image: psychesImage, image1: psychesImage1, image2: psychesImage2, image3: psychesImage3, image4: psychesImage4, video: psychesletterVideo},
-     {projectID: 6,title: "JCSGO San Isidro System", duration: "20 days", active: false, language: "Nextjs, Prisma, Typescript",image: JCSGOProject, image1: JCSGO1, image2: JCSGO2, image3: JCSGO3, image4: JCSGO4, video: jcsgoVideo},
-     {projectID: 7,title: "Super Mario Sep (Meme by IJI)", duration: "3 days", active: false, language: "Javascript",image: marioProject, image1: mario1, image2: mario2, image3: mario3, image4: mario4, video: marioVideo},
-    {projectID: 4,title: "DSWD City Link Attendance Scanner", duration: "2 days", active: false, language: "React/Capacitor/Android Studio",image: capacitorProject, image1: capacitor1, image2: capacitor2, image3: capacitor3, image4: capacitor4, video: capacitorVideo},
-     {projectID: 5,title: "React Native/Appwrite + NextJs Attendance Scanner", duration: "6 days (Still ongoing)", active: false, language: "React Native/Appwrite/NextJs",image: reactnativeProject, image1: reactnative1, image2: reactnative2, image3: reactnative3, image4: reactnative4, video: reactnativeVideo},
-    {projectID: 3,title: "React Game Website", duration: "3 days", active: false, language: "React Framework/Javascript",image: reactProject, image1: react1, image2: react2, image3: react3, image4: react4, video: reactVideo},
-   ]
+    const projectsNum = projectOrder
+      .map((projectID) => projectList.find((project) => project.projectID === projectID))
+      .filter((project): project is (typeof projectList)[number] => Boolean(project));
 
    function NextIndex() {
   setProjectIndex((prev) => {
