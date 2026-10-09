@@ -244,7 +244,7 @@ function PrevIndex() {
 
 
     return (
-        <main className="w-full overflow-x-hidden overflow-y-hidden mt-10" >
+        <main className="w-full overflow-x-hidden overflow-y-visible mt-10" >
            <section ref={section0Ref} data-section="section0"></section>
 
           

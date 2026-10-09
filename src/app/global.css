@@ -40,7 +40,14 @@ body {
     margin: 0;
     background-color: var(--foreground-bg);
     color: var(--foreground-rgb);
-    cursor: none; 
+    cursor: none;
+    width: 100%;
+    min-width: 320px;
+    overflow-x: hidden;
+}
+
+html {
+    width: 100%;
     overflow-x: hidden;
 }
 
@@ -48,10 +55,10 @@ body {
     margin-top: 50px;
 }
 
-/* globals.css */
 @media (max-width: 1024px) {
-  html {
-    width: 1280px;
-    overflow-x: scroll; /* allows scrolling instead of compressing */
+  html,
+  body {
+    width: 100%;
+    overflow-x: hidden;
   }
 }
