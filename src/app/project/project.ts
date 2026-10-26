@@ -360,7 +360,7 @@ export const projectList: Project[] = [
     description4: "The website was built using the Next js framework for the front-end, MongoDB for the database, and Base64 image encoding for efficient image handling.",
     description5: "The website features a user-friendly interface, allowing customers to browse products, add items to their cart, and complete purchases securely.",
     description6: "The website is fully responsive, ensuring a seamless shopping experience across different devices, including desktops, tablets, and smartphones.",
-    description7: "The project was completed in just one day.",
+    description7: "The project was completed in just one day. Amazing!",
   },
 ];
 
