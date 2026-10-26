@@ -86,6 +86,12 @@ const mario2 = "/images/mario2.PNG";
 const mario3 = "/images/mario3.PNG";
 const mario4 = "/images/mario4.PNG";
 
+const oldgalProject = "/images/oldgalProject.PNG";
+const oldgal2 = "/images/oldgal1.PNG";
+const oldgal1 = "/images/oldgal2.PNG";
+const oldgal3 = "/images/oldgal3.PNG";
+const oldgal4 = "/images/oldgal4.PNG";
+
 const istritpayterVideo = "/videos/webm/istritpayterVideo.webm";
 const psychesletterVideo = "/videos/webm/psychesletterVideo.webm";
 const reactVideo = "/videos/webm/reactVideo.webm";
@@ -93,6 +99,7 @@ const capacitorVideo = "/videos/webm/dswdScanner.webm";
 const reactnativeVideo = "/videos/webm/reactnativeVideo.webm";
 const jcsgoVideo = "/videos/webm/jcsgoVideo.webm";
 const marioVideo = "/videos/webm/marioVideo.webm";
+const oldgalVideo = "/videos/webm/oldgalVideo.webm";
 
 export const projectList: Project[] = [
   {
@@ -322,9 +329,42 @@ export const projectList: Project[] = [
     description6: "Status: Under Development.",
     description7: "Latest Update: April 1, 2026",
   },
+  {
+    projectID: 8,
+    title: "Old Gal (Fashion Shop Website)",
+    duration: "1 day",
+    active: false,
+    language: "Next js, MongoDb, Base64 image",
+    image: oldgalProject,
+    date: "October 2026",
+    genre: "Online Shop Website",
+    relDate: "October 20, 2026",
+    fileSize: "802 MB",
+    mirrors: "Website, github",
+    video: oldgalVideo,
+    image1: oldgal1,
+    image2: oldgal2,
+    image3: oldgal3,
+    image4: oldgal4,
+    installnote1: "The website is already live. Live demo is now available at the link below",
+    sysreq1: "Platforms: Mobile and PC (Web Browser)",
+    sysreq2: "OS: Windows 7/8/10 (64-bit) or Android 5.0+ OS",
+    sysreq3: "Memory: 1 GB RAM",
+    sysreq4: "Storage: 800 MB available space",
+    link1: "https://oldgall.vercel.app/",
+    link2: "https://github.com/Andrei12388/oldGall",
+    linknote: "Note: Link 1 - Website (Live Demo), Link 2 - Github (Source Code)",
+    description1: "Old Gal (2026) — Fashion Shop Website",
+    description2: "This is a Commision project.",
+    description3: "The client requested a website for their online shop, which sells various products.",
+    description4: "The website was built using the Next js framework for the front-end, MongoDB for the database, and Base64 image encoding for efficient image handling.",
+    description5: "The website features a user-friendly interface, allowing customers to browse products, add items to their cart, and complete purchases securely.",
+    description6: "The website is fully responsive, ensuring a seamless shopping experience across different devices, including desktops, tablets, and smartphones.",
+    description7: "The project was completed in just one day.",
+  },
 ];
 
-export const projectOrder = [2, 1, 6, 7, 4, 5, 3];
+export const projectOrder = [2, 1, 8, 6, 7, 4, 5, 3];
 
 export const getProjectById = (projectId: number) =>
   projectList.find((project) => project.projectID === projectId);

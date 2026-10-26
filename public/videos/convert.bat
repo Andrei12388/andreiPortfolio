@@ -1,19 +1,49 @@
+
 @echo off
-REM Converts all MP4 videos in public/videos to WebM
+setlocal
 
-SET inputFolder=gallery\
-SET outputFolder=public\videos\webm
+REM Always run relative to this .bat file
+cd /d "%~dp0"
 
-REM Create output folder if it doesn't exist
-IF NOT EXIST "%outputFolder%" (
-    mkdir "%outputFolder%"
+REM Input and output folders
+set "inputFolder=gallery"
+set "outputFolder=public\videos\webm"
+
+REM Check if FFmpeg is installed
+where ffmpeg >nul 2>&1
+if errorlevel 1 (
+    echo ERROR: FFmpeg is not installed or not in PATH.
+    echo Install it, then reopen your terminal.
+    pause
+    exit /b 1
 )
 
-REM Loop through all mp4 files
-FOR %%F IN (%inputFolder%\*.mp4) DO (
-    echo Converting %%F to WebM...
-    ffmpeg -i "%%F" -c:v libvpx-vp9 -b:v 1M -c:a libopus "%outputFolder%\%%~nF.webm"
+REM Check input folder
+if not exist "%inputFolder%\" (
+    echo ERROR: Input folder "%inputFolder%" was not found.
+    pause
+    exit /b 1
 )
 
-echo All conversions done!
+REM Create output folder
+if not exist "%outputFolder%\" mkdir "%outputFolder%"
+
+REM Convert all MP4 files
+set "found=0"
+
+for %%F in ("%inputFolder%\*.mp4") do (
+    if exist "%%~fF" (
+        set "found=1"
+        echo Converting: %%~nxF
+
+        ffmpeg -n -i "%%~fF" -c:v libvpx-vp9 -b:v 1M -c:a libopus "%outputFolder%\%%~nF.webm"
+
+        if errorlevel 1 echo WARNING: Failed to convert %%~nxF
+    )
+)
+
+if "%found%"=="0" echo No MP4 files found in "%inputFolder%".
+
+echo.
+echo Conversion process finished.
 pause
