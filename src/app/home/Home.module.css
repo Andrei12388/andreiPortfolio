@@ -389,6 +389,7 @@
     font-weight: bold;
 }
 .contactPage{
+    border: "3px solid red";
     display: flex;
     width: min(100%, 70em);
     flex-direction: row;
@@ -402,6 +403,7 @@
     filter: drop-shadow(0 0 8px var(--pinkcolor));
     background-color: black;
     border-radius: 2em;
+    border: "3px solid red";
     display: flex;
     gap: 1em;
     flex-direction: column;
@@ -409,7 +411,7 @@
     align-items: center;
     margin-bottom: 4em;
     padding: 2em;
-    width: min(100%, 24em);
+    width: min(100%, 40em);
     transition: all 0.3s ease-in-out;
 } 
 .contactsContainer:hover{

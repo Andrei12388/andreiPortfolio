@@ -678,8 +678,8 @@ function PrevIndex() {
          </div>
          
          </div>
-        
-         <div><h1 className={styles.pageTitle}>Skills Proficieny</h1>
+         {/*Skills container */}
+         <div className="w-full"><h1 className={styles.pageTitle}>Skills Proficieny</h1>
             <audio ref={hoverSound} src={coinSound} preload="auto"></audio>
          <div>
           <p>Frontend/Design</p>
@@ -724,6 +724,7 @@ function PrevIndex() {
           </div>
 
           </div>
+          {/*End Skills container */}
         </div>
         
     </div>
